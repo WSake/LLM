@@ -1,0 +1,15 @@
+## NLP 是人工智能的一个迷人分支，它弥合了人类语言和机器理解之间的差距。
+## 从简单的文本处理到理解语言的细微差别，NLP 在许多应用程序中发挥着至关重要的作用，例如翻译、情感分析、聊天机器人🤖等等
+
+- **文本预处理**: 了解各种文本预处理步骤，如分词（将文本拆分为单词或句子）、词干提取（将单词减少为根形式）、词形还原（类似于词干提取，但要考虑上下文）、停用词删除等
+- **特征提取**: 熟悉将文本数据转换为机器学习算法可以理解的格式的技术。主要方法包括词袋 （BoW）、词频逆文档频率 （TF-IDF） 和 n-grams。 
+- **文本嵌入**: 文本嵌入是一种单词表示形式，它允许具有相似含义的单词具有类似的表示形式。主要方法包括 Word2Vec、GloVe 和 FastText。
+- **递归神经网络（RNN）**: 了解 RNN 的工作原理，RNN 是一种旨在处理序列数据的神经网络。探索 LSTM 和 GRU，这两种 RNN 变体能够学习长期依赖关系
+
+📚 Resources:
+
+- [**RealPython - NLP with spaCy in Python**](https://realpython.com/natural-language-processing-spacy-python/): 有关 Python 中用于 NLP 任务的 spaCy 库的详尽指南
+- [**Kaggle - NLP 指南**](https://www.kaggle.com/learn-guide/natural-language-processing): 一些笔记本和资源，用于 Python 中 NLP 的动手解释
+- [**Jay Alammar - The Illustration Word2Vec**](https://jalammar.github.io/illustrated-word2vec/): 帮助你了解著名的 Word2Vec 架构
+- [**Jake Tae - 从零开始构建PyTorch RNN**](https://jaketae.github.io/study/pytorch-rnn/): 在 PyTorch 中实用简单地实现 RNN、LSTM 和 GRU 模型
+- [**colah's blog - 理解LSTM**](https://colah.github.io/posts/2015-08-Understanding-LSTMs/): 一篇关于 LSTM 网络的文章
