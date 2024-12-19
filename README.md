@@ -4,75 +4,74 @@
 <br/>
 
 <div align="center">
-  <h1>🗣️ Large Language Model Course</h1>
+  <h1>🧑‍💻 大模型课程</h1>
   <p align="center">
-    🐦 <a href="https://twitter.com/maximelabonne">Follow me on X</a> • 
-    🤗 <a href="https://huggingface.co/mlabonne">Hugging Face</a> • 
-    💻 <a href="https://mlabonne.github.io/blog">Blog</a> • 
-    📙 <a href="https://github.com/PacktPublishing/Hands-On-Graph-Neural-Networks-Using-Python">Hands-on GNN</a>
+    📙 <a href="https://blog.csdn.net/weixin_49627776?spm=1000.2115.3001.5343">CSDN博客</a> 
   </p>
 </div>
 <br/>
 
-The LLM course is divided into three parts:
+Mlabonne大佬贡献的课程分为三个部分:
 
-1. 🧩 **LLM Fundamentals** covers essential knowledge about mathematics, Python, and neural networks.
-2. 🧑‍🔬 **The LLM Scientist** focuses on building the best possible LLMs using the latest techniques.
-3. 👷 **The LLM Engineer** focuses on creating LLM-based applications and deploying them.
+1. 🧩 **LLM Fundamentals** 涵盖有关数学、Python 以及神经网络的基本知识。
+2. 🧑‍🔬 **The LLM Scientist** 专注于使用最新技术构建最好的 LLM。
+3. 👷 **The LLM Engineer** 重点介绍如何创建基于 LLM 的应用程序并进行部署。
 
-For an interactive version of this course, I created two **LLM assistants** that will answer questions and test your knowledge in a personalized way:
+有意思的，对于课程的交互式版本，Mlabonne微调了两个 LLM 助手，它们将以个性化的方式回答问题：
 
-* 🤗 [**HuggingChat Assistant**](https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1): Free version using Mixtral-8x7B.
-* 🤖 [**ChatGPT Assistant**](https://chat.openai.com/g/g-yviLuLqvI-llm-course): Requires a premium account.
+* 🤗 [**HuggingChat Assistant**](https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1): Mixtral-8x7B版本
+* 🤖 [**ChatGPT Assistant**](https://chat.openai.com/g/g-yviLuLqvI-llm-course): ChatGPT版本
 
-## 📝 Notebooks
+## 📝 分享有关学习笔记与文章
 
-A list of notebooks and articles related to large language models.
-
-### Tools
+### 一些工具
 
 | Notebook | Description | Notebook |
 |----------|-------------|----------|
-| 🧐 [LLM AutoEval](https://github.com/mlabonne/llm-autoeval) | Automatically evaluate your LLMs using RunPod | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🥱 LazyMergekit | Easily merge models using MergeKit in one click. | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🦎 LazyAxolotl | Fine-tune models in the cloud using Axolotl in one click. | <a href="https://colab.research.google.com/drive/1TsDKNo2riwVmU55gjuBgB1AXVtRRfRHW?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| ⚡ AutoQuant | Quantize LLMs in GGUF, GPTQ, EXL2, AWQ, and HQQ formats in one click. | <a href="https://colab.research.google.com/drive/1b6nqC7UZVt8bx4MksX7s656GXPM-eWw4?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🌳 Model Family Tree | Visualize the family tree of merged models. | <a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🚀 ZeroSpace | Automatically create a Gradio chat interface using a free ZeroGPU. | <a href="https://colab.research.google.com/drive/1LcVUW5wsJTO2NGmozjji5CkC--646LgC"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🧐 [LLM AutoEval](https://github.com/mlabonne/llm-autoeval) | 使用 RunPod 自动评估您的 LLM | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🥱 LazyMergekit | 使用 MergeKit 一键轻松合并模型 | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🦎 LazyAxolotl | 使用 Axolotl 一键微调模型 | <a href="https://colab.research.google.com/drive/1TsDKNo2riwVmU55gjuBgB1AXVtRRfRHW?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| ⚡ AutoQuant | 一键量化 GGUF、GPTQ、EXL2、AWQ 和 HQQ 格式的 LLM | <a href="https://colab.research.google.com/drive/1b6nqC7UZVt8bx4MksX7s656GXPM-eWw4?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🌳 Model Family Tree | 可视化合并模型的family tree | <a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 🚀 ZeroSpace | 使用免费的 ZeroGPU 自动创建 Gradio 聊天界面 | <a href="https://colab.research.google.com/drive/1LcVUW5wsJTO2NGmozjji5CkC--646LgC"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
-### Fine-tuning
-
-| Notebook | Description | Article | Notebook |
-|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fine-tune Llama 2 with QLoRA | Step-by-step guide to supervised fine-tune Llama 2 in Google Colab. | [Article](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune CodeLlama using Axolotl | End-to-end guide to the state-of-the-art tool for fine-tuning. | [Article](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html) | <a href="https://colab.research.google.com/drive/1Xu0BrCB7IShwSWKVcfAfhehwjDrDMH5m?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Mistral-7b with QLoRA | Supervised fine-tune Mistral-7b in a free-tier Google Colab with TRL. |  | <a href="https://colab.research.google.com/drive/1o_w0KastmEJNVwT5GoqMCciH-18ca5WS?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Mistral-7b with DPO | Boost the performance of supervised fine-tuned models with DPO. | [Article](https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html) | <a href="https://colab.research.google.com/drive/15iFBr1xWgztXvhrj5I9fBv20c7CFOPBE?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Llama 3 with ORPO | Cheaper and faster fine-tuning in a single stage with ORPO. | [Article](https://mlabonne.github.io/blog/posts/2024-04-19_Fine_tune_Llama_3_with_ORPO.html) | <a href="https://colab.research.google.com/drive/1eHNWg9gnaXErdAa8_mcvjMupbSS6rDvi"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Llama 3.1 with Unsloth | Ultra-efficient supervised fine-tuning in Google Colab. | [Article](https://mlabonne.github.io/blog/posts/2024-07-29_Finetune_Llama31.html) | <a href="https://colab.research.google.com/drive/164cg_O7SV7G8kZr_JXqLd6VC7pd86-1Z?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-
-### Quantization
+### 微调教程
 
 | Notebook | Description | Article | Notebook |
 |---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Introduction to Quantization | Large language model optimization using 8-bit quantization. | [Article](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html) | <a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 4-bit Quantization using GPTQ | Quantize your own open-source LLMs to run them on consumer hardware. | [Article](https://mlabonne.github.io/blog/4bit_quantization/) | <a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Quantization with GGUF and llama.cpp | Quantize Llama 2 models with llama.cpp and upload GGUF versions to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| ExLlamaV2: The Fastest Library to Run LLMs | Quantize and run EXL2 models and upload them to the HF Hub. | [Article](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune Llama 2 with QLoRA | 在 Google Colab 中监督微调 Llama 2 的分步指南 | [Article](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune CodeLlama using Axolotl | 用于微调的最先进工具的端到端指南 | [Article](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html) | <a href="https://colab.research.google.com/drive/1Xu0BrCB7IShwSWKVcfAfhehwjDrDMH5m?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune Mistral-7b with QLoRA | 在带有 TRL 的 Google Colab 中监督微调 Mistral-7b |  | <a href="https://colab.research.google.com/drive/1o_w0KastmEJNVwT5GoqMCciH-18ca5WS?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune Mistral-7b with DPO | 使用 DPO 提高受监督的微调模型的性能 | [Article](https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html) | <a href="https://colab.research.google.com/drive/15iFBr1xWgztXvhrj5I9fBv20c7CFOPBE?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune Llama 3 with ORPO | 使用 ORPO 在单个阶段进行更便捷、更快速的微调 | [Article](https://mlabonne.github.io/blog/posts/2024-04-19_Fine_tune_Llama_3_with_ORPO.html) | <a href="https://colab.research.google.com/drive/1eHNWg9gnaXErdAa8_mcvjMupbSS6rDvi"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Fine-tune Llama 3.1 with Unsloth | Google Colab 中的超高效监督微调 | [Article](https://mlabonne.github.io/blog/posts/2024-07-29_Finetune_Llama31.html) | <a href="https://colab.research.google.com/drive/164cg_O7SV7G8kZr_JXqLd6VC7pd86-1Z?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
-### Other
+### 量化教程
 
 | Notebook | Description | Article | Notebook |
 |---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Decoding Strategies in Large Language Models | A guide to text generation from beam search to nucleus sampling | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Improve ChatGPT with Knowledge Graphs | Augment ChatGPT's answers with knowledge graphs. | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Merge LLMs with MergeKit | Create your own models easily, no GPU required! | [Article](https://mlabonne.github.io/blog/posts/2024-01-08_Merge_LLMs_with_mergekit%20copy.html) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Create MoEs with MergeKit | Combine multiple experts into a single frankenMoE | [Article](https://mlabonne.github.io/blog/posts/2024-03-28_Create_Mixture_of_Experts_with_MergeKit.html) | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Uncensor any LLM with abliteration | Fine-tuning without retraining | [Article](https://mlabonne.github.io/blog/posts/2024-06-04_Uncensor_any_LLM_with_abliteration.html) | <a href="https://colab.research.google.com/drive/1VYm3hOcvCpbGiqKZb141gJwjdmmCcVpR?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Introduction to Quantization | 使用 8 位量化优化大型语言模型 | [Article](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html) | <a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| 4-bit Quantization using GPTQ | 量化您自己的开源 LLM，以便在消费类硬件上运行它们 | [Article](https://mlabonne.github.io/blog/4bit_quantization/) | <a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Quantization with GGUF and llama.cpp | 使用 llama.cpp 量化 Llama 2 模型，并将 GGUF 版本上传到 HF Hub | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| ExLlamaV2: The Fastest Library to Run LLMs | 量化并运行 EXL2 模型，并将其上传到 HF Hub | [Article](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
-## 🧩 LLM Fundamentals
+### 其他教程
 
-This section introduces essential knowledge about mathematics, Python, and neural networks. You might not want to start here but refer to it as needed.
+| Notebook | Description | Article | Notebook |
+|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Decoding Strategies in Large Language Models | 从光速搜索到深度采样的文本生成指南 | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Improve ChatGPT with Knowledge Graphs | 用知识图谱增强 ChatGPT 的回答 | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Merge LLMs with MergeKit | 轻松创建你自己的模型，无需 GPU！| [Article](https://mlabonne.github.io/blog/posts/2024-01-08_Merge_LLMs_with_mergekit%20copy.html) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Create MoEs with MergeKit | 将多个专家合并为一个 frankenMoE | [Article](https://mlabonne.github.io/blog/posts/2024-03-28_Create_Mixture_of_Experts_with_MergeKit.html) | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+| Uncensor any LLM with abliteration | 无需重新训练即可进行微调 | [Article](https://mlabonne.github.io/blog/posts/2024-06-04_Uncensor_any_LLM_with_abliteration.html) | <a href="https://colab.research.google.com/drive/1VYm3hOcvCpbGiqKZb141gJwjdmmCcVpR?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
+
+<br/>
+以上是学习笔记分享，下面就是正式内容啦~
+<br/>
+
+## 🧩 第一部分 LLM 基础
+
+首先介绍有关数学、Python 和神经网络的基本知识。您可能不需要从这里开始，但您可以参考它的内容。
 
 <details>
 <summary>Toggle section</summary>
