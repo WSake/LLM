@@ -1,6 +1,6 @@
 # LLM 学习笔记
 <br/>
-<a href="https://github.com/mlabonne/llm-course/tree/main">Large Language Model Course</a>学习笔记，整理出来的中文版，希望对您有帮助~😀
+<a href="https://github.com/mlabonne/llm-course/tree/main">Large Language Model Course</a>分享的学习课程，整理出来的中文版，希望对您有帮助~😀
 <br/>
 
 <div align="center">
@@ -13,11 +13,11 @@
 
 Mlabonne大佬推荐以及贡献的课程分为三个部分:
 
-1. 🧩 **LLM Fundamentals** 涵盖有关数学、Python 以及神经网络的基本知识。
-2. 🧑‍🔬 **The LLM Scientist** 专注于使用最新技术构建最好的 LLM。
-3. 👷 **The LLM Engineer** 重点介绍如何创建基于 LLM 的应用程序并进行部署。
+1. 🧩 **LLM Fundamentals** 涵盖有关数学、Python 以及神经网络的基本知识
+2. 🧑‍🔬 **The LLM Scientist** 专注于使用最新技术构建最好的 LLM
+3. 👷 **The LLM Engineer** 重点介绍如何创建基于 LLM 的应用程序并进行部署
 
-有意思的，对于课程的交互式版本，Mlabonne微调了两个 LLM 助手，它们将以个性化的方式回答问题：
+有意思的，对于课程的交互式版本，Mlabonne微调了两个 LLM 助手，它们将以个性化的方式回答你的问题：
 
 * 🤗 [**HuggingChat Assistant**](https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1): Mixtral-8x7B版本
 * 🤖 [**ChatGPT Assistant**](https://chat.openai.com/g/g-yviLuLqvI-llm-course): ChatGPT版本
