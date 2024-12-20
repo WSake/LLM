@@ -4,14 +4,14 @@
 <br/>
 
 <div align="center">
-  <h1>🧑‍💻 大模型课程</h1>
+  <h1>🧑‍💻 大模型学习课程</h1>
   <p align="center">
     📙 <a href="https://blog.csdn.net/weixin_49627776?spm=1000.2115.3001.5343">CSDN博客</a> 
   </p>
 </div>
 <br/>
 
-Mlabonne大佬贡献的课程分为三个部分:
+Mlabonne大佬推荐以及贡献的课程分为三个部分:
 
 1. 🧩 **LLM Fundamentals** 涵盖有关数学、Python 以及神经网络的基本知识。
 2. 🧑‍🔬 **The LLM Scientist** 专注于使用最新技术构建最好的 LLM。
