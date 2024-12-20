@@ -22,6 +22,27 @@ Mlabonne大佬推荐以及贡献的课程分为三个部分:
 * 🤗 [**HuggingChat Assistant**](https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1): Mixtral-8x7B版本
 * 🤖 [**ChatGPT Assistant**](https://chat.openai.com/g/g-yviLuLqvI-llm-course): ChatGPT版本
 
+## 学习路线
+## 🧩 第一部分 LLM 基础
+
+介绍有关数学、Python 和神经网络的基本知识。您可能不需要从这里开始，但您可以参考它的学习路线，或者推荐给您的朋友。
+
+![](img/roadmap_fundamentals.png)
+
+## 🧑‍🔬 The LLM Scientist
+
+这一部分课程侧重于学习如何使用最新技术构建 LLM
+
+![](img/roadmap_scientist.png)
+
+
+## 👷 The LLM Engineer
+
+这部分课程侧重于学习如何构建可在实际生活中使用的 LLM 驱动的Agent，重点是增强模型并且部署
+
+![](img/roadmap_engineer.png)
+
+
 ## 📝 分享有关学习笔记与文章
 
 ### 一些工具
@@ -65,28 +86,7 @@ Mlabonne大佬推荐以及贡献的课程分为三个部分:
 | Create MoEs with MergeKit | 将多个专家合并为一个 frankenMoE | [Article](https://mlabonne.github.io/blog/posts/2024-03-28_Create_Mixture_of_Experts_with_MergeKit.html) | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 | Uncensor any LLM with abliteration | 无需重新训练即可进行微调 | [Article](https://mlabonne.github.io/blog/posts/2024-06-04_Uncensor_any_LLM_with_abliteration.html) | <a href="https://colab.research.google.com/drive/1VYm3hOcvCpbGiqKZb141gJwjdmmCcVpR?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
 
-<br/>
-以上是学习笔记分享，下面就是正式内容啦~
-<br/>
 
-## 🧩 第一部分 LLM 基础
-
-介绍有关数学、Python 和神经网络的基本知识。您可能不需要从这里开始，但您可以参考它的学习路线，或者推荐给您的朋友。
-
-![](img/roadmap_fundamentals.png)
-
-## 🧑‍🔬 The LLM Scientist
-
-这一部分课程侧重于学习如何使用最新技术构建 LLM
-
-![](img/roadmap_scientist.png)
-
-
-## 👷 The LLM Engineer
-
-这部分课程侧重于学习如何构建可在实际生活中使用的 LLM 驱动的Agent，重点是增强模型并且部署
-
-![](img/roadmap_engineer.png)
 
 ---
 ## Acknowledgements
