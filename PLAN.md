@@ -505,13 +505,13 @@
 | 08-RAG 六篇成品（全部实测数字入文 + 复现脚本） | ✅ | 01-Embedding与检索基础 / 03-混合检索与重排 / 04-分块与元数据 / 05-查询侧技术 / 07-RAG评测-RAGAS / 09-Advanced-RAG模式清单 |
 | 01-基础 **8 篇成品 + 3 复现脚本**（本次重构收口：命名统一 + Python 独立成篇 + 顺序=知识点链） | ✅ | 00 入口 + 01 Python工程 / 02 数学 / 03 范式与评估 / 04 sklearn实战 / 05 深度学习 / 06 NLP与Transformer前置 / 07 GPU（配 `python_basics_demo.py`、`ml_eval_demo.py`、`gpu_math_demo.py` 实测） |
 | notebook 6 个（009 全管线 / 010 RAGAS 评测 / 011 父子分块+元数据过滤 + 3 个 00 入门） | ✅ | `code/notebooks/` |
-| 02-核心原理 **开篇 8 篇 + 6 复现脚本**（路线 A 首签批次：时间线 + Transformer + Attention 家族 + 多头注意力 + MLA + 位置编码 + FFN与激活 + LayerNorm/RMSNorm；`transformer_demo.py` 内含 9 参数手写反向 + 全元素对账 5.8e-11 ✅、KV 复用 12× 实测；`attention_demo.py` 内含 Self/Cross/Masked 指纹 + 复杂度指数拟合 2.2 vs 0.8 + MHA→GQA→MQA 打分一致 1e-16 + KV 账；`mla_demo.py` 低秩瓶颈实证 + 迷你/V2 三级缓存账；`rope_demo.py` 保范可逆 + 平移不变对照 + 2× 外推与 PI 实证 4.6×→0.14×；`ffn_norm_demo.py` SwiGLU 8/3C 同预算 + 激活形态指纹 + LN/RMS 数值差 + 计时 93% + post/pre 位置×lr 窗口） | ✅ | `02-核心原理/00-技术演化时间线.md` / `01-Transformer.md` / `02-Attention家族-Self-Cross-Masked.md` / `03-多头注意力-MHA-MQA-GQA.md` / `04-MLA-多头潜注意力.md` / `05-位置编码-Sinusoidal-RoPE与窗口扩展.md` / `06-FFN与激活函数-ReLU-GELU-SwiGLU.md` / `07-归一化-LayerNorm-RMSNorm-QKNorm.md` |
+| 02-核心原理 **开篇 9 篇 + 7 复现脚本**（路线 A 首签批次：时间线 + Transformer + Attention 家族 + 多头注意力 + MLA + 位置编码 + FFN与激活 + LayerNorm/RMSNorm + Tokenizer BPE/BBPE；`transformer_demo.py` 内含 9 参数手写反向 + 全元素对账 5.8e-11 ✅、KV 复用 12× 实测；`attention_demo.py` 内含 Self/Cross/Masked 指纹 + 复杂度指数拟合 2.2 vs 0.8 + MHA→GQA→MQA 打分一致 1e-16 + KV 账；`mla_demo.py` 低秩瓶颈实证 + 迷你/V2 三级缓存账；`rope_demo.py` 保范可逆 + 平移不变对照 + 2× 外推与 PI 实证 4.6×→0.14×；`ffn_norm_demo.py` SwiGLU 8/3C 同预算 + 激活形态指纹 + LN/RMS 数值差 + 计时 93% + post/pre 位置×lr 窗口；`tokenizer_demo.py` 从 0 实现 BPE/BBPE + 压缩比曲线 1.00→3.20→退化 26× + 中文 BBPE 膨胀 3.8× + embedding 账） | ✅ | `02-核心原理/00-技术演化时间线.md` / `01-Transformer.md` / `02-Attention家族-Self-Cross-Masked.md` / `03-多头注意力-MHA-MQA-GQA.md` / `04-MLA-多头潜注意力.md` / `05-位置编码-Sinusoidal-RoPE与窗口扩展.md` / `06-FFN与激活函数-ReLU-GELU-SwiGLU.md` / `07-归一化-LayerNorm-RMSNorm-QKNorm.md` / `08-Tokenizer-BPE-SentencePiece-BBPE.md` |
 | 本篇（PLAN v2） | ✅ | 本文件；仓外权威版同步 |
 
 **下一步（按教学主干次序；用户口径：从 01 起，00 留到最后总结）**：
 1. 01-基础 已闭环并完成结构性重构：8 篇成品按 §17.1 依赖链命名与排序，Python 工程能力独立成篇。
 2. 候选 A（续 08-RAG，P0 完整块）：`02-核心流水线`（总览章）→ `10-Agentic-RAG`（衔接 05 多跳）→ `11-GraphRAG` → `06-上下文压缩` → `08-向量数据库选型` → `13-失败模式与修复`；同批产出 `021/022`。
-3. 候选 B（路线 A 教学主干，已启动）：已交付 `02-核心原理` 的 `00-技术演化时间线` + `01-Transformer` + `02-Attention家族` + `03-多头注意力-MHA-MQA-GQA` + `04-MLA` + `05-位置编码` + `06-FFN与激活` + `07-归一化`；下一批按 22 点原理链推进 → `08-Tokenizer` → `09-Embedding` → `10-KV-Cache`。
+3. 候选 B（路线 A 教学主干，已启动）：已交付 `02-核心原理` 的 `00-技术演化时间线` + `01-Transformer` + `02-Attention家族` + `03-多头注意力-MHA-MQA-GQA` + `04-MLA` + `05-位置编码` + `06-FFN与激活` + `07-归一化` + `08-Tokenizer`；下一批按 22 点原理链推进 → `09-Embedding` → `10-KV-Cache` → `11-Logits与采样`。
 4. 候选 C（路线 B 概念起点）：`06-应用开发` 首篇（Model API 与流式）。
 5. 每篇仍走"写作→跑数→索引打勾→README 同步→提交"闭环。
 

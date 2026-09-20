@@ -49,7 +49,7 @@
 |---|---|---|
 | [`00-知识地图`](00-知识地图) | 知识地图全文 · 对照索引 · 技术栈分层 | §0 / §16 / §17 |
 | [`01-基础`](01-基础) | Python 工程 / 数学 / ML(范式+sklearn) / DL / NLP / GPU，8 篇成品按依赖链排序 | §1 |
-| [`02-核心原理`](02-核心原理) | Transformer → 推理模型，22 个原理点（已开篇 8 篇：时间线 + Transformer + Attention 家族 + 多头注意力 + MLA + 位置编码 + FFN与激活 + LayerNorm/RMSNorm） | §2 |
+| [`02-核心原理`](02-核心原理) | Transformer → 推理模型，22 个原理点（已开篇 9 篇：时间线 + Transformer + Attention 家族 + 多头注意力 + MLA + 位置编码 + FFN与激活 + LayerNorm/RMSNorm + Tokenizer BPE/BBPE） | §2 |
 | [`03-模型家族`](03-模型家族) | GPT / Llama / Qwen / DeepSeek / Claude / Gemini 等 | §3 |
 | [`04-训练体系`](04-训练体系) | 数据 → 预训练 → 对齐 → 微调 → 评测 | §4 |
 | [`05-推理与部署`](05-推理与部署) | 量化 / Serving / 并行 / 压测 | §5 |
@@ -96,8 +96,8 @@
 | 合规（LICENSE / NOTICE） | ✅ |
 | 知识地图入库 + 对照索引 | ✅ |
 | 目录结构（17 顶层目录） | ✅ |
-| 正文内容（89 知识点） | 🟡 持续推进中 · 01-基础 补齐至 8 篇成品（入口 + 7 内容课按 §17.1 依赖链排序）；08-RAG 系列 6 篇成品落地；02-核心原理 开篇 8 篇（时间线 + Transformer + Attention 家族 + 多头注意力 + MLA + 位置编码 + FFN与激活 + LayerNorm/RMSNorm，配 `transformer_demo.py`/`attention_demo.py`/`mla_demo.py`/`rope_demo.py`/`ffn_norm_demo.py`）（合计 **22 篇成品 + 13 篇提纲**） |
-| 可运行实验 | 🟡 notebook 6 个 + 可复现脚本 8 个（Python 工程 `python_basics_demo.py` / 评估口径 `ml_eval_demo.py` / GPU 账本 `gpu_math_demo.py` / Transformer 从零验证与 KV 复用 `transformer_demo.py` / Attention 家族与 MHA→GQA 显存账 `attention_demo.py` / MLA 低秩与缓存账 `mla_demo.py` / RoPE 旋转与外推 `rope_demo.py` / FFN 三兄弟与 LayerNorm/RMSNorm 实测 `ffn_norm_demo.py`） |
+| 正文内容（89 知识点） | 🟡 持续推进中 · 01-基础 补齐至 8 篇成品（入口 + 7 内容课按 §17.1 依赖链排序）；08-RAG 系列 6 篇成品落地；02-核心原理 开篇 9 篇（时间线 + Transformer + Attention 家族 + 多头注意力 + MLA + 位置编码 + FFN与激活 + LayerNorm/RMSNorm + Tokenizer BPE/BBPE，配 `transformer_demo.py`/`attention_demo.py`/`mla_demo.py`/`rope_demo.py`/`ffn_norm_demo.py`/`tokenizer_demo.py`）（合计 **23 篇成品 + 13 篇提纲**） |
+| 可运行实验 | 🟡 notebook 6 个 + 可复现脚本 9 个（Python 工程 `python_basics_demo.py` / 评估口径 `ml_eval_demo.py` / GPU 账本 `gpu_math_demo.py` / Transformer 从零验证与 KV 复用 `transformer_demo.py` / Attention 家族与 MHA→GQA 显存账 `attention_demo.py` / MLA 低秩与缓存账 `mla_demo.py` / RoPE 旋转与外推 `rope_demo.py` / FFN 三兄弟与 LayerNorm/RMSNorm 实测 `ffn_norm_demo.py` / BPE 从零实现与中英 token 统计 `tokenizer_demo.py`） |
 
 ---
 
