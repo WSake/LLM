@@ -172,7 +172,7 @@ A4 embedding 账（参数量 = vocab × hidden, 显存 = 参数 × 2 字节 fp16
 - **词表扩展（衍生）的代价就在这行账上**：加 1 万个专业 token = `10000×hidden` 新参数，且新 token 没有历史 id，需要对齐/初始化——这就是"给领域加词表"为什么是个要专门评估的动作；
 - **字节级 token（另一个衍生）把账往"省词表、费 token"推**：上文 3× 膨胀就是它的机会成本。
 
-下节配合 `09-Embedding与词表`，把"token id → 向量"的查表层补完；本篇只要立住："**词表是显存的第一笔账，Tokenizer 决定了这笔账的规模。**"
+下节配合 [`09-Embedding与词表`](../02-核心原理/09-Embedding与词表.md)，把"token id → 向量"的查表层补完；本篇只要立住："**词表是显存的第一笔账，Tokenizer 决定了这笔账的规模。**"
 
 ---
 
@@ -194,7 +194,7 @@ A4 embedding 账（参数量 = vocab × hidden, 显存 = 参数 × 2 字节 fp16
 
 Tokenizer 把文本变成了整数 id，但**整数 id 还不能直接进注意力**——它们要过一层"查表"，变成稠密向量。这层就是模型的入口通道：
 
-> **`09-Embedding与词表`**（下一章, 规划）：token→稠密向量的查表层，输出层常共享同一矩阵（`01-Transformer` 里那条 shape 链的 `x = emb(token)` 就是它）。它接住本篇章的"词表显存账"，把 Vocab×D 大矩阵的初始化、共享、Low-Rank 优化一并展开。
+> **[`09-Embedding与词表`](../02-核心原理/09-Embedding与词表.md)**：token→稠密向量的查表层，输出层常共享同一矩阵（`01-Transformer` 里那条 shape 链的 `x = emb(token)` 就是它）。它接住本篇章的"词表显存账"，把 Vocab×D 大矩阵的初始化、共享、Low-Rank 优化一并展开。
 
 > 一句话带走：**Tokenizer 是"文本 ↔ 整数 id"的翻译官，现代事实标准是 BPE——从 187 个字符起步，把最常共现的相邻对一次次合并（实测压缩比随词表 1.00→3.20 chars/token），词表涨过头则每句塌成 1 token（实测 26× 退化）；中文在同一套词表下逐句 0.3–0.5 token/字（实测 A2）；字节级 BPE 让中文膨胀 3.8×（实测 A3）而英文不变——换来任意语言零 OOV；SentencePiece 是管线、BPE/BBPE 是机器；全部映射进 0.26–2.1 GB 的 embedding 第一笔账（实测账算 A4）。**
 
@@ -210,5 +210,5 @@ Tokenizer 把文本变成了整数 id，但**整数 id 还不能直接进注意�
 - Meta LLaMA-3 tokenizer 公开配置：128,256 词表、字节级 BPE（本文 A4 账算输入）
 - OpenAI GPT-4/cl100k_base tokenizer：100,277 词表、tiktoken 字节级 BPE（行业对照, 非本文实测）
 - 衔接上一章：`07-归一化-LayerNorm-RMSNorm-QKNorm`；`01-Transformer`（shape 链里的 token 维）
-- 衍生挂载：`09-Embedding与词表`（查表层）、`23-`（Unigram/词表扩展的具体用途）
+- 衍生挂载：[`09-Embedding与词表`](../02-核心原理/09-Embedding与词表.md)（查表层）、`23-`（Unigram/词表扩展的具体用途）
 - `code/scripts/tokenizer_demo.py`：实验 A0 语料账、A1 压缩比曲线、A2 中英逐句、A3 BBPE 对照、A4 embedding 显存账（一键复现）
