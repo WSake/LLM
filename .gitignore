@@ -10,6 +10,7 @@ env/
 .ipynb_checkpoints/
 .pytest_cache/
 .mypy_cache/
+out/
 
 # IDE
 .idea/

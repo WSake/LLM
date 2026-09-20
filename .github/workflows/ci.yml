@@ -20,7 +20,7 @@ jobs:
           python - <<'PY'
           import pathlib
           bad = []
-          ok = ('#', '<div', '>', '-', '["{]')
+          ok = ('#', '<div', '>', '-')
           for p in pathlib.Path('.').rglob('*.md'):
               if '.git' in p.parts:
                   continue
@@ -29,11 +29,11 @@ jobs:
                   bad.append((str(p), 'BOM'))
                   continue
               try:
-                  raw.decode('utf-8')
+                  text = raw.decode('utf-8')
               except UnicodeDecodeError:
                   bad.append((str(p), '非UTF-8'))
                   continue
-              first = raw.splitlines()[:1]
+              first = text.splitlines()[:1]
               if not first or not first[0].lstrip().startswith(ok):
                   bad.append((str(p), '首行非法（需 # / <div / - / > 开头）'))
           if bad:
