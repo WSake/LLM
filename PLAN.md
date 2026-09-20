@@ -601,5 +601,6 @@ LLM/
 | notebook 生成器随仓发布 | ✅ | `tools/_gen_nb009.py`（`python tools/_gen_nb009.py` 重新渲染） |
 | CI utf8 检查修复 | ✅ | `ci.yml`（bytes/str 混用 TypeError 已修 + 本地复跑绿） |
 | 对照索引/README 登记 | ✅ | notebook 3 → 4，进度表更新 |
+| P0 章节正文首篇 | ✅ | `08-RAG体系/01-Embedding与检索基础.md`（配 009，检索基础/选型/指标/常见坑，Hit@k 实测数字入文） |
 
-**下一项（进入阶段 1）**：P0 章节正文开写——第一篇将与 009 配对：`08-RAG体系/03-检索技术-BM25-Dense-Hybrid-ColBERT.md`（含 009 的 Hit@k 数字作为"怎么跑/评测验证"）。
+**下一项（阶段 1 持续）**：`08-RAG体系/03-混合检索与重排.md`——把 BM25 与稠密结果融合（加权/RRF）+ Reranker 精排，与 009 的 Hybrid 一节配对。
