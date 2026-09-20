@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Markdown 内部链接死链检查（相对路径）。
+"""Markdown 内部链接死链检查（GitHub 语义：相对链接一律按所在文件目录解析）。
    用法: python tools/check_links.py [仓库根]
-   只校验 './' 或 '../' 相对路径；外链、锚点、常见写法忽略。"""
+   外链、锚点、常见写法忽略；裸路径（无 ./ ../ 前缀）同样校验。"""
 import os, re, sys, pathlib
 
 sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -32,10 +32,8 @@ def main():
                 continue
             if any(s in target for s in SKIP_SUBSTR):
                 continue
-            # 路径含空格或不属于我们的相对格式 → 跳过（避免误报）
+            # 路径含空格 → 跳过（避免误报）
             if ' ' in target:
-                continue
-            if not (target.startswith('./') or target.startswith('../')):
                 continue
             # 去掉锚点
             tgt = target.split('#')[0]

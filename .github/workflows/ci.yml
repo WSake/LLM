@@ -15,6 +15,9 @@ jobs:
       - name: 相对链接死链检查（tools/check_links.py）
         run: |
           python tools/check_links.py .
+      - name: 对照索引一致性检查（新增文件必须登记索引）
+        run: |
+          python tools/check_index_consistency.py
       - name: UTF-8 无 BOM & 首行合法性检查
         run: |
           python - <<'PY'
