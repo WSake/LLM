@@ -1,99 +1,125 @@
-# LLM 学习笔记
-<br/>
-<a href="https://github.com/mlabonne/llm-course/tree/main">Large Language Model Course</a>分享的学习课程，整理出来的中文版，希望对您有帮助~😀
-<br/>
-
 <div align="center">
-  <h1>🧑‍💻 大模型学习课程</h1>
-  <p align="center">
-    📙 <a href="https://blog.csdn.net/weixin_49627776?spm=1000.2115.3001.5343">CSDN博客</a> 
-  </p>
+
+# 🧑‍💻 中文大模型全栈学习体系（2026）
+
+**从 0 到能部署、能调参、能做 Agent 的完整路线 · 一份地图 + 89 个知识点 + 可运行的实验**
+
+[![License](https://img.shields.io/github/license/WSake/LLM)](LICENSE)
+[![Stars](https://img.shields.io/github/stars/WSake/LLM)](https://github.com/WSake/LLM/stargazers)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](CONTRIBUTING.md)
+[![中文](https://img.shields.io/badge/语言-中文-blue)]()
+[![更新](https://img.shields.io/badge/更新-动态维护-brightgreen)]()
+
+> 基于 [mlabonne/llm-course](https://github.com/mlabonne/llm-course)（Apache-2.0）整理与**大幅扩展**的中文版。
+> 📢 **我们不是翻译仓库，而是一套按《大模型知识地图（2026）》重组的独立学习体系**——比原版多出 Agent / RAG 体系 / 评测 / 推理优化 / 多模态 / 安全 等 2026 年核心板块。
+
 </div>
-<br/>
-
-Mlabonne大佬推荐以及贡献的课程分为三个部分:
-
-1. 🧩 **LLM Fundamentals** 涵盖有关数学、Python 以及神经网络的基本知识
-2. 🧑‍🔬 **The LLM Scientist** 专注于使用最新技术构建最好的 LLM
-3. 👷 **The LLM Engineer** 重点介绍如何创建基于 LLM 的应用程序并进行部署
-
-有意思的，对于课程的交互式版本，Mlabonne微调了两个 LLM 助手，它们将以个性化的方式回答你的问题：
-
-* 🤗 [**HuggingChat Assistant**](https://hf.co/chat/assistant/66029d2e5f4a884f7aabc9d1): Mixtral-8x7B版本
-* 🤖 [**ChatGPT Assistant**](https://chat.openai.com/g/g-yviLuLqvI-llm-course): ChatGPT版本
-
-## 学习路线
-## 🧩 第一部分 LLM 基础
-
-介绍有关数学、Python 和神经网络的基本知识。您可能不需要从这里开始，但您可以参考它的学习路线，或者推荐给您的朋友。
-
-![](img/roadmap_fundamentals.png)
-
-## 🧑‍🔬 The LLM Scientist
-
-这一部分课程侧重于学习如何使用最新技术构建 LLM
-
-![](img/roadmap_scientist.png)
-
-
-## 👷 The LLM Engineer
-
-这部分课程侧重于学习如何构建可在实际生活中使用的 LLM 驱动的Agent，重点是增强模型并且部署
-
-![](img/roadmap_engineer.png)
-
-
-## 📝 分享有关学习笔记与文章
-
-### 一些工具
-
-| Notebook | Description | Notebook |
-|----------|-------------|----------|
-| 🧐 [LLM AutoEval](https://github.com/mlabonne/llm-autoeval) | 使用 RunPod 自动评估您的 LLM | <a href="https://colab.research.google.com/drive/1Igs3WZuXAIv9X0vwqiE90QlEPys8e8Oa?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🥱 LazyMergekit | 使用 MergeKit 一键轻松合并模型 | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🦎 LazyAxolotl | 使用 Axolotl 一键微调模型 | <a href="https://colab.research.google.com/drive/1TsDKNo2riwVmU55gjuBgB1AXVtRRfRHW?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| ⚡ AutoQuant | 一键量化 GGUF、GPTQ、EXL2、AWQ 和 HQQ 格式的 LLM | <a href="https://colab.research.google.com/drive/1b6nqC7UZVt8bx4MksX7s656GXPM-eWw4?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🌳 Model Family Tree | 可视化合并模型的family tree | <a href="https://colab.research.google.com/drive/1s2eQlolcI1VGgDhqWIANfkfKvcKrMyNr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 🚀 ZeroSpace | 使用免费的 ZeroGPU 自动创建 Gradio 聊天界面 | <a href="https://colab.research.google.com/drive/1LcVUW5wsJTO2NGmozjji5CkC--646LgC"><img src="img/colab.svg" alt="Open In Colab"></a> |
-
-### 微调教程
-
-| Notebook | Description | Article | Notebook |
-|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Fine-tune Llama 2 with QLoRA | 在 Google Colab 中监督微调 Llama 2 的分步指南 | [Article](https://mlabonne.github.io/blog/posts/Fine_Tune_Your_Own_Llama_2_Model_in_a_Colab_Notebook.html) | <a href="https://colab.research.google.com/drive/1PEQyJO1-f6j0S_XJ8DV50NkpzasXkrzd?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune CodeLlama using Axolotl | 用于微调的最先进工具的端到端指南 | [Article](https://mlabonne.github.io/blog/posts/A_Beginners_Guide_to_LLM_Finetuning.html) | <a href="https://colab.research.google.com/drive/1Xu0BrCB7IShwSWKVcfAfhehwjDrDMH5m?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Mistral-7b with QLoRA | 在带有 TRL 的 Google Colab 中监督微调 Mistral-7b |  | <a href="https://colab.research.google.com/drive/1o_w0KastmEJNVwT5GoqMCciH-18ca5WS?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Mistral-7b with DPO | 使用 DPO 提高受监督的微调模型的性能 | [Article](https://mlabonne.github.io/blog/posts/Fine_tune_Mistral_7b_with_DPO.html) | <a href="https://colab.research.google.com/drive/15iFBr1xWgztXvhrj5I9fBv20c7CFOPBE?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Llama 3 with ORPO | 使用 ORPO 在单个阶段进行更便捷、更快速的微调 | [Article](https://mlabonne.github.io/blog/posts/2024-04-19_Fine_tune_Llama_3_with_ORPO.html) | <a href="https://colab.research.google.com/drive/1eHNWg9gnaXErdAa8_mcvjMupbSS6rDvi"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Fine-tune Llama 3.1 with Unsloth | Google Colab 中的超高效监督微调 | [Article](https://mlabonne.github.io/blog/posts/2024-07-29_Finetune_Llama31.html) | <a href="https://colab.research.google.com/drive/164cg_O7SV7G8kZr_JXqLd6VC7pd86-1Z?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-
-### 量化教程
-
-| Notebook | Description | Article | Notebook |
-|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Introduction to Quantization | 使用 8 位量化优化大型语言模型 | [Article](https://mlabonne.github.io/blog/posts/Introduction_to_Weight_Quantization.html) | <a href="https://colab.research.google.com/drive/1DPr4mUQ92Cc-xf4GgAaB6dFcFnWIvqYi?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| 4-bit Quantization using GPTQ | 量化您自己的开源 LLM，以便在消费类硬件上运行它们 | [Article](https://mlabonne.github.io/blog/4bit_quantization/) | <a href="https://colab.research.google.com/drive/1lSvVDaRgqQp_mWK_jC9gydz6_-y6Aq4A?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Quantization with GGUF and llama.cpp | 使用 llama.cpp 量化 Llama 2 模型，并将 GGUF 版本上传到 HF Hub | [Article](https://mlabonne.github.io/blog/posts/Quantize_Llama_2_models_using_ggml.html) | <a href="https://colab.research.google.com/drive/1pL8k7m04mgE5jo2NrjGi8atB0j_37aDD?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| ExLlamaV2: The Fastest Library to Run LLMs | 量化并运行 EXL2 模型，并将其上传到 HF Hub | [Article](https://mlabonne.github.io/blog/posts/ExLlamaV2_The_Fastest_Library_to_Run%C2%A0LLMs.html) | <a href="https://colab.research.google.com/drive/1yrq4XBlxiA0fALtMoT2dwiACVc77PHou?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-
-### 其他教程
-
-| Notebook | Description | Article | Notebook |
-|---------------------------------------|-------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Decoding Strategies in Large Language Models | 从光速搜索到深度采样的文本生成指南 | [Article](https://mlabonne.github.io/blog/posts/2022-06-07-Decoding_strategies.html) | <a href="https://colab.research.google.com/drive/19CJlOS5lI29g-B3dziNn93Enez1yiHk2?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Improve ChatGPT with Knowledge Graphs | 用知识图谱增强 ChatGPT 的回答 | [Article](https://mlabonne.github.io/blog/posts/Article_Improve_ChatGPT_with_Knowledge_Graphs.html) | <a href="https://colab.research.google.com/drive/1mwhOSw9Y9bgEaIFKT4CLi0n18pXRM4cj?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Merge LLMs with MergeKit | 轻松创建你自己的模型，无需 GPU！| [Article](https://mlabonne.github.io/blog/posts/2024-01-08_Merge_LLMs_with_mergekit%20copy.html) | <a href="https://colab.research.google.com/drive/1_JS7JKJAQozD48-LhYdegcuuZ2ddgXfr?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Create MoEs with MergeKit | 将多个专家合并为一个 frankenMoE | [Article](https://mlabonne.github.io/blog/posts/2024-03-28_Create_Mixture_of_Experts_with_MergeKit.html) | <a href="https://colab.research.google.com/drive/1obulZ1ROXHjYLn6PPZJwRR6GzgQogxxb?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-| Uncensor any LLM with abliteration | 无需重新训练即可进行微调 | [Article](https://mlabonne.github.io/blog/posts/2024-06-04_Uncensor_any_LLM_with_abliteration.html) | <a href="https://colab.research.google.com/drive/1VYm3hOcvCpbGiqKZb141gJwjdmmCcVpR?usp=sharing"><img src="img/colab.svg" alt="Open In Colab"></a> |
-
-
-
----
-## Acknowledgements
-
-目前这还是不完整的学习笔记，推荐课程链接来自于<a href="https://github.com/mlabonne/llm-course/tree/main">Large Language Model Course</a>，后续会持续补充具体的学习内容~~🎄
-
-*Disclaimer: I am not affiliated with any sources listed here.*
 
 ---
 
+## ✨ 这是什么
+
+你想系统地进入大模型世界，但市面上的教程要么是"收藏夹吃灰"的散装链接，要么是只能看不能跑的旧课程。这个仓库把这两件事一起解决：
+
+| | 这仓库提供 | 解决什么问题 |
+|---|---|---|
+| 🗺️ **一份知识地图** | 《大模型知识地图_完整版.md》：1977 行、19 章、90+ 知识点，每个点都有掌握度标记（🔵了解/🟢掌握/🔴深入） | "我该学什么、学到什么程度、查漏补缺" |
+| 📇 **一张对照索引** | [对照索引.md](00-知识地图/对照索引.md) 把 89+ 知识点与仓库目录一一映射 | "知识点在哪、写到哪了、你能帮什么忙" |
+| 🧪 **能跑的实验** | 每个核心知识点配可一键运行的 notebook | "看完就手不痒，边学边跑" |
+| 🛤️ **双路线规划** | 算法/研究员路线 + 应用/工程路线，从入门到专家 | "下一站往哪走" |
+
+**不是又一份论文清单**，而是告诉你"为什么要出现 → 解决什么问题 → 怎么跑起来 → 怎么看结果"。
+
+---
+
+## 🚀 Quick Start（三步开始）
+
+1. **先看地图** → [`00-知识地图/大模型知识地图_完整版.md`](00-知识地图/大模型知识地图_完整版.md)，花 1 周通读建立坐标
+2. **挑路线** → 打开 [对照索引](00-知识地图/对照索引.md)，按"总览表"逐目录推进（路线正文在 [16-学习路线与里程碑](16-学习路线与里程碑) 建设中）
+3. **动手指** → 打开 [`code/notebooks/`](code/notebooks/) 里已有的 3 个入门 notebook 一键运行（Colab 环境，免费可用）
+
+> 💡 想先查漏补缺？打开 [对照索引](00-知识地图/对照索引.md)，逐条打勾，标出你的空缺——**那 90+ 个 ⬜ 也是本仓库的贡献清单**，欢迎 PR。
+> 🗺️ 想看懂我们怎么打到 100K star？读 [PLAN.md](PLAN.md)（阶段化执行手册）。
+
+---
+
+## 📚 目录导航（与知识地图一一对应）
+
+| 目录 | 内容 | 地图章节 |
+|---|---|---|
+| [`00-知识地图`](00-知识地图) | 知识地图全文 · 对照索引 · 技术栈分层 | §0 / §16 / §17 |
+| [`01-基础`](01-基础) | Python / 数学 / ML / DL / NLP / GPU | §1 |
+| [`02-核心原理`](02-核心原理) | Transformer → 推理模型，22 个原理点 | §2 |
+| [`03-模型家族`](03-模型家族) | GPT / Llama / Qwen / DeepSeek / Claude / Gemini 等 | §3 |
+| [`04-训练体系`](04-训练体系) | 数据 → 预训练 → 对齐 → 微调 → 评测 | §4 |
+| [`05-推理与部署`](05-推理与部署) | 量化 / Serving / 并行 / 压测 | §5 |
+| [`06-应用开发`](06-应用开发) | API / Prompt / 工具调用 / Workflow | §6 |
+| [`07-应用框架`](07-应用框架) | LangGraph / LlamaIndex / MCP / DSPy … | §7 |
+| [`08-RAG体系`](08-RAG体系) ⭐ | 检索 → 重排 → GraphRAG → Agentic RAG → 评测 | §8 |
+| [`09-Agent体系`](09-Agent体系) ⭐ | Loop → Coding Agent → 评测 → 安全 | §9 |
+| [`10-多模态`](10-多模态) | ViT / VLM / OCR / 语音 / 视频 | §10 |
+| [`11-评测与可观测`](11-评测与可观测) ⭐ | Benchmark / LLM-judge / Langfuse | §11 |
+| [`12-安全`](12-安全) | 注入 / 越狱 / 护栏 / 合规 | §12 |
+| [`13-工程化`](13-工程化与基础设施) | GPU / K8s / Ray / LLMOps | §13 |
+| [`14-垂直领域`](14-垂直领域) | 医疗 / 金融 / 法律 / 企业知识库 | §14 |
+| [`15-前沿技术`](15-前沿技术) | 2026 热点滚动更新 | §15 |
+| [`16-学习路线`](16-学习路线与里程碑) | 双路线 + 里程碑 + 时间线 | §18 |
+
+> ⭐ = 本仓库差异化主战场：2026 年最核心、而原版 llm-course 完全没有的板块。
+
+---
+
+## 🗺️ 学习路线总览
+
+```
+【路线 A · 算法/研究员】
+01-基础 → 02-核心原理 → 03-模型家族 → 04-训练体系 → 11-评测
+      → 专深方向（对齐/RL / 训练效率 / 多模态数据）
+
+【路线 B · 应用/工程】
+01-基础(轻量) → 06-应用开发 → 07-应用框架 → 08-RAG → 09-Agent
+      → 11-评测 → 13-工程化 → 14-垂直领域
+
+【共同交汇带】05-推理与部署 + 11-评测 + 12-安全
+```
+
+详细分级路线、里程碑项目、推荐开源仓库见 [`16-学习路线与里程碑`](16-学习路线与里程碑)（路线正文建设中）；100K 行动手册见 [PLAN.md](PLAN.md)。
+
+---
+
+## 📈 当前进度
+
+> 阶段 0（合规 + 结构 + 门面）完成后更新此表。
+
+| 板块 | 状态 |
+|---|---|
+| 合规（LICENSE / NOTICE） | ✅ |
+| 知识地图入库 + 对照索引 | ✅ |
+| 目录结构（17 顶层目录） | ✅ |
+| 正文内容（89 知识点） | 🟡 持续推进中 |
+| 可运行 notebook | 🟡 规划 16 个，逐步落地 |
+
+---
+
+## 🤝 参与贡献
+
+我们的目标是成为 **"中文大模型学习第一梯队"**，这需要社区而不是一个人。
+
+- 📖 想学：看 [对照索引](00-知识地图/对照索引.md)，找到 ⬜ 的知识点，我们优先写更热门、更稀缺的
+- ✍️ 想写：看 [CONTRIBUTING.md](CONTRIBUTING.md)，选题 + 模板 + 规范都写在里面了
+- 🐛 发现问题：[提 issue](https://github.com/WSake/LLM/issues/new/choose)（纠错 / 内容请求 / Bug）
+- ⭐ 支持我们：点个 Star，让更多中文学习者看到
+
+---
+
+## 📖 参考资料与致谢
+
+- 上游课程：[mlabonne/llm-course](https://github.com/mlabonne/llm-course)（Apache-2.0）——感谢于本仓库整理与扩展的基础
+- 结构基准：《大模型知识地图_完整版》（本仓库独有资产，2026 版）
+- 课程向工具与 Colab 模块引用自上游 README（见 git 历史）
+
+> *本仓库始终遵循上游 Apache-2.0 许可与 NOTICE 声明。*
+
+## Licence
+
+[Apache-2.0](LICENSE) · 详见 [NOTICE](NOTICE)（衍生声明与版权归属）。

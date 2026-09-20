@@ -1,0 +1,44 @@
+name: CI 检查
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  link-check:
+    name: Markdown 内部链接 & 编码检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 相对链接死链检查（tools/check_links.py）
+        run: |
+          python tools/check_links.py .
+      - name: UTF-8 无 BOM & 首行合法性检查
+        run: |
+          python - <<'PY'
+          import pathlib
+          bad = []
+          ok = ('#', '<div', '>', '-', '["{]')
+          for p in pathlib.Path('.').rglob('*.md'):
+              if '.git' in p.parts:
+                  continue
+              raw = p.read_bytes()
+              if raw.startswith(b'\xef\xbb\xbf'):
+                  bad.append((str(p), 'BOM'))
+                  continue
+              try:
+                  raw.decode('utf-8')
+              except UnicodeDecodeError:
+                  bad.append((str(p), '非UTF-8'))
+                  continue
+              first = raw.splitlines()[:1]
+              if not first or not first[0].lstrip().startswith(ok):
+                  bad.append((str(p), '首行非法（需 # / <div / - / > 开头）'))
+          if bad:
+              for x in bad:
+                  print('::error::', *x)
+              exit(1)
+          print('utf8-check OK')
+          PY

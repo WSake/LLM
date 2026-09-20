@@ -1,0 +1,24 @@
+LLM (中文大模型学习体系) — 衍生作品声明
+==========================================
+
+本仓库是以下上游作品的**中文整理 / 扩展衍生版**，依据 Apache License 2.0 发布：
+
+  原项目：Large Language Model Course（llm-course）
+  作者：  Maxime Labonne（GitHub: mlabonne）
+  来源：  https://github.com/mlabonne/llm-course
+  许可：  Apache License 2.0
+
+本仓库在原项目基础上：
+  - 将课程内容翻译 / 整理为中文；
+  - 依据《大模型知识地图_完整版.md》扩展 / 重组目录结构；
+  - 补充 2026 年技术内容（RAG 体系 / Agent 体系 / 评测与可观测 / 推理优化 / 多模态 / 安全 等）。
+
+根据 Apache-2.0 第 4 条（Redistribution），任何分发用途须：
+  1. 保留本 NOTICE 与被分发源码中的版权声明；
+  2. 保留 LICENSE 许可文本；
+  3. 不得虚假声明作品来源；上游版权仍归属原作者。
+
+如您基于本仓库再分发 / 修改，请在您的作品中以同等方式保留此声明。
+
+---
+Copyright 对其各自贡献者保留（详见各文件 AUTHORS 与 git 历史）。
