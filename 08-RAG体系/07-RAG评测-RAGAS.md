@@ -1,7 +1,7 @@
 # 📊 RAG 评测：不评测等于没做（RAGAS 与三层指标）
 
 > 对应知识点：知识地图 §8.13（RAG 评测，🔴 会跑）、§17.6.8（RAG 评测 RAGAS 等）、§11.4。
-> 前置：[01-Embedding与检索基础.md](01-Embedding与检索基础.md)、[03-混合检索与重排.md](03-混合检索与重排.md)；动手：[notebook 009](../code/notebooks/009-中文RAG全管线.ipynb) 第 7-8 节。
+> 前置：[01-Embedding与检索基础.md](01-Embedding与检索基础.md)、[03-混合检索与重排.md](03-混合检索与重排.md)；动手：[notebook 010](../code/notebooks/010-RAGAS评测一个RAG系统.ipynb)（本文数字一键复现）、[notebook 009](../code/notebooks/009-中文RAG全管线.ipynb) 第 7-8 节。
 > 一句话：**检索能跑不代表系统能用——评测是衡量「检索→证据→答案」整条链的真正刹车，没有它，你永远不知道改的是不是地板。**
 
 ---
