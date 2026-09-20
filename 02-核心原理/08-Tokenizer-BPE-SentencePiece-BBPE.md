@@ -210,5 +210,5 @@ Tokenizer 把文本变成了整数 id，但**整数 id 还不能直接进注意�
 - Meta LLaMA-3 tokenizer 公开配置：128,256 词表、字节级 BPE（本文 A4 账算输入）
 - OpenAI GPT-4/cl100k_base tokenizer：100,277 词表、tiktoken 字节级 BPE（行业对照, 非本文实测）
 - 衔接上一章：`07-归一化-LayerNorm-RMSNorm-QKNorm`；`01-Transformer`（shape 链里的 token 维）
-- 衍生挂载：[`09-Embedding与词表`](../02-核心原理/09-Embedding与词表.md)（查表层）、`23-`（Unigram/词表扩展的具体用途）
+- 衍生挂载：[`09-Embedding与词表`](../02-核心原理/09-Embedding与词表.md)（查表层）、`08-Tokenizer`（Unigram/词表扩展的深挖方向）
 - `code/scripts/tokenizer_demo.py`：实验 A0 语料账、A1 压缩比曲线、A2 中英逐句、A3 BBPE 对照、A4 embedding 显存账（一键复现）

@@ -199,7 +199,7 @@ B3 训练曲线（同架构同 seed, eval-MSE, 每 500 步采点）：
 - 训练早期用统计**观测 scale**（如 MS-AMP/DeepSeek 的 per-tensor scaling），本质上就是"实时感知每一层的归一化尺度"；
 - MMP（多模型并行，DeepSeek-V3）全局 scale 方案之所以必要，正是因为归一化只保证"相对稳定"，还差一个"全局绝对值"——FP8 逼出来的两件事都在低头把尺度管好。
 
-所以 `17-FP8训练` 那一章会有个前置依赖：**想省那点显存/算力，先把归一化做对。**这篇文章就是那个前提。
+所以 `04-训练体系`（训练精度 · BF16/FP8）那一章会有个前置依赖：**想省那点显存/算力，先把归一化做对。**这篇文章就是那个前提。
 
 ---
 
@@ -237,5 +237,5 @@ B3 训练曲线（同架构同 seed, eval-MSE, 每 500 步采点）：
 - Dehghani et al. (2023) *Scaling Vision Transformers to 22B Parameters*：QK-Norm 在超大规模训练中的必要性与实践
 - Kalamkar et al. / 各家 FP8 训练报告（MS-AMP、DeepSeek-V3 训练技术）：per-tensor/全局 scale 与归一化的关系（本知识点的"关系=FP8 前置"）
 - Touvron et al. (2023) *LLaMA*：RMSNorm + pre-LN 的事实标准参考实现
-- 衔接上一章：`06-FFN与激活函数-ReLU-GELU-SwiGLU`（激活尺度控制 → 归一化的配套）；衍生挂载：`17-FP8训练`（量化尺度前提）
+- 衔接上一章：`06-FFN与激活函数-ReLU-GELU-SwiGLU`（激活尺度控制 → 归一化的配套）；衍生挂载：`04-训练体系`（FP8·量化尺度前提）
 - `code/scripts/ffn_norm_demo.py`：实验 B1 数值差异、B2 计时、B3 post/pre 训练曲线（全数字一键复现）

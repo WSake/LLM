@@ -116,7 +116,7 @@ Top-p（2019，Holtzman；也叫 nucleus 采样）不锁个数，锁**累积概�
 - **T≈1 × Top-p 0.9–0.95**：创意/对话的常用档——保持长尾表达又滤掉明显离谱的；
 - **Top-k ≠ Top-p 哪个更常用**：实际很多实现默认 `top_p=0.95` 并保留 top_k 兜底（如 vLLM/OAI 兼容层）——两者非二选一。
 
-（温度还有"冷却调度"的用途：思考/长生成中把 T 从高往低调，细化后阶段采样更笃定——这是 `19-长上下文/20-推理模型` 会用到的场景。）
+（温度还有"冷却调度"的用途：思考/长生成中把 T 从高往低调，细化后阶段采样更笃定——这是 `17-长上下文/20-推理模型` 会用到的场景。）
 
 ---
 
@@ -192,5 +192,5 @@ Top-p（2019，Holtzman；也叫 nucleus 采样）不锁个数，锁**累积概�
 - Fan et al. (2018) *Hierarchical Neural Story Generation*：Top-k 采样的代表性口径
 - HuggingFace `transformers.generation` 文档：`temperature / top_k / top_p / repetition_penalty` 参数与流水线顺序（本文 A2–A6 的实现参照；本脚本为教学 toy，非 HF 复刻）
 - 衔接上游：`10-KV-Cache与显存账本`（decode 每步出 logits）、`09-Embedding与词表`（输出头把隐藏向量投回词表分数）、`08-Tokenizer-BPE-SentencePiece-BBPE`（token↔id 双向翻译）
-- 衍生挂载：`06-应用开发`（约束解码/结构化输出）、`19-长上下文`/`20-推理模型`（温度冷却调度）
+- 衍生挂载：`06-应用开发`（约束解码/结构化输出）、`17-长上下文`/`20-推理模型`（温度冷却调度）
 - `code/scripts/sampling_demo.py`：实验 A1 温度影谱、A2 Top-k 覆盖、A3 Top-p 涌现集、A4 重复惩罚、A5 温度 0 vs 1（一键复现）
