@@ -566,8 +566,8 @@ LLM/
 - [ ] 4. 完成目录迁移映射表（旧 4 板块 → 新 17 目录），git mv 执行
 - [ ] 5. 建 `CONTRIBUTING.md`、issue 模板、最小 CI（死链检查）
 - [ ] 6. 修/删空壳 `大模型基础.md`；Scientist/Engineer 提纲批量加"待长肉"标记
-- [ ] 7. 提交规范化 + `release: v0.1`
-- [ ] 8. 选第一个 P0 notebook（建议 009 中文 RAG 全管线）开始制作
+- [x] 7. 提交规范化 + `release: v0.1`
+- [x] 8. 选第一个 P0 notebook（建议 009 中文 RAG 全管线）开始制作 → ✅ 完成，见 `code/notebooks/009-中文RAG全管线.ipynb`
 
 > 换身份的一刀已经划下：**此仓库不再是"llm-course 的翻译"，而是"一张 90+ 知识点的地图 + 16 个可运行实验 + 两条路线图"组成的中文大模型学习操作系统。**
 
@@ -589,3 +589,17 @@ LLM/
 | PLAN 入仓 | ✅ | 本文件（`PLAN.md`） |
 
 **下一步即行动清单第 8 项**：第一个 P0 notebook（009 · 中文文档 RAG 全管线），随后按 §2.4 清单推进。
+
+---
+
+### ⭐ 阶段 0.5 执行快照（2026-09-20 · v1.2）
+
+| 任务 | 状态 | 位置 |
+|---|---|---|
+| notebook 009 · 中文 RAG 全管线 | ✅ 端到端验证通过 | `code/notebooks/009-中文RAG全管线.ipynb`（BM25+Dense+Hybrid Hit@5 均 1.0000；LLM-judge 评测表；100 条内嵌中文语料，零下载） |
+| 语料源 | ✅ | `code/notebooks/_demo_corpus.json` |
+| notebook 生成器随仓发布 | ✅ | `tools/_gen_nb009.py`（`python tools/_gen_nb009.py` 重新渲染） |
+| CI utf8 检查修复 | ✅ | `ci.yml`（bytes/str 混用 TypeError 已修 + 本地复跑绿） |
+| 对照索引/README 登记 | ✅ | notebook 3 → 4，进度表更新 |
+
+**下一项（进入阶段 1）**：P0 章节正文开写——第一篇将与 009 配对：`08-RAG体系/03-检索技术-BM25-Dense-Hybrid-ColBERT.md`（含 009 的 Hit@k 数字作为"怎么跑/评测验证"）。
