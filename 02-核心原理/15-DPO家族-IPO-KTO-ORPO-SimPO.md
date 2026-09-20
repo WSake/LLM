@@ -378,7 +378,7 @@ ORPO/SimPO（本章）：驻留 16.3 万参数 · 无参考模型 · 单段 23s
 
 ## 11. 衔接下一章：GRPO 与 RLVR
 
-DPO 家族已经把"裁判（RM）"和"在线采样"省掉了，但还有一个箱子：**奖励的信号从哪来？** 到 `17.2.17` 的 GRPO 与 RLVR（Reinforcement Learning with Verifiable Rewards），DeepSeek-R1 直接把"奖励模型"换成**可验证规则**（数学答案对错、代码能否通过测试）——连偏好标注都省了，信号变成"对就是对"的二进制。GRPO 去掉了 online RLHF 的 value head（每步省一张 critic 的驻留与 rollout），RLVR 把"谁更好"的裁判从可训练 RM 换成了可验证的规则。这条线从 DPO 家族的"省 RM"一路走到"省标注"，正是下章要讲的：**当奖励是规则可验证的时候，对齐的终局状态会简化到什么程度。**
+DPO 家族已经把"裁判（RM）"和"在线采样"省掉了，但还有一个箱子：**奖励的信号从哪来？** 到 `17.2.17` 的 GRPO 与 RLVR（Reinforcement Learning with Verifiable Rewards），DeepSeek-R1 直接把"奖励模型"换成**可验证规则**（数学答案对错、代码能否通过测试）——连偏好标注都省了，信号变成"对就是对"的二进制。GRPO 去掉了 online RLHF 的 value head（每步省一张 critic 的驻留与 rollout），RLVR 把"谁更好"的裁判从可训练 RM 换成了可验证的规则。这条线从 DPO 家族的"省 RM"一路走到"省标注"，正是 `16` 章（[`16-GRPO与RLVR.md`](16-GRPO与RLVR.md)）要讲的：**当奖励是规则可验证的时候，对齐的终局状态会简化到什么程度。**
 
 > 一句话：**DPO 家族省掉 RM 与在线采样，GRPO/RLVR 再把裁判换成规则——'喜欢'从人打分的比较，变成规则可验证的断言，RLHF 时代的每一块重资产都在被人反复拆解。**
 
