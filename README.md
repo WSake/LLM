@@ -96,7 +96,7 @@
 | 合规（LICENSE / NOTICE） | ✅ |
 | 知识地图入库 + 对照索引 | ✅ |
 | 目录结构（17 顶层目录） | ✅ |
-| 正文内容（89 知识点） | 🟡 持续推进中 · 01-基础 补齐至 8 篇成品（入口 + 7 内容课按 §17.1 依赖链排序）；08-RAG 系列 6 篇成品落地；02-核心原理 开篇 2 篇（时间线 + Transformer，配 `transformer_demo.py`）（合计 **16 篇成品 + 15 篇提纲**） |
+| 正文内容（89 知识点） | 🟡 持续推进中 · 01-基础 补齐至 8 篇成品（入口 + 7 内容课按 §17.1 依赖链排序）；08-RAG 系列 6 篇成品落地；02-核心原理 开篇 2 篇（时间线 + Transformer，配 `transformer_demo.py`）（合计 **16 篇成品 + 13 篇提纲**） |
 | 可运行实验 | 🟡 notebook 6 个 + 可复现脚本 4 个（Python 工程 `python_basics_demo.py` / 评估口径 `ml_eval_demo.py` / GPU 账本 `gpu_math_demo.py` / Transformer 从零验证与 KV 复用 `transformer_demo.py`） |
 
 ---
