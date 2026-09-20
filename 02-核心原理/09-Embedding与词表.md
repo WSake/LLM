@@ -174,7 +174,7 @@ patch embedding（ViT 风格）：
 
 Embedding 做完了"信息流的入口"，下一个"贵"的点在**进去之后**：自回归逐 token 生成时，每一层注意力都要重新算所有历史的 K/V——把历史 K/V 缓存起来就是 KV Cache，它和这里的词表账同属"显存怎么花"的主战场，而且**量级大得多**。`03`/`04` 已经分别账过 GQA 与 MLA 的 KV 省法，下一章把它们收拢成一个统一账本：
 
-> **[`10-KV-Cache与显存账本`](../02-核心原理/10-KV-Cache与显存账本.md)**：`03-多头注意力` 说过 GQA 把 8k KV 从 4GB 压到 1GB，`04-MLA` 说过 128k 长上下文 MHA 要 488GB 而 MLA 只要 8.6GB——都源自同一个公式：`2×层数×KV头数×头维×序列长度×字节`。本章把"KV Cache 为什么这么贵、怎么在 7B 模型 32k 长度下手算它"讲成一个完整账本（实测：MHA 16GB vs GQA 4GB、decode 快 14.0×、分页碎片 70%→1%、前缀缓存省 42%）。紧承 09-Embedding 之后，`11-Logits 与采样` 接力。
+> **[`10-KV-Cache与显存账本`](../02-核心原理/10-KV-Cache与显存账本.md)**：`03-多头注意力` 说过 GQA 把 8k KV 从 4GB 压到 1GB，`04-MLA` 说过 128k 长上下文 MHA 要 488GB 而 MLA 只要 8.6GB——都源自同一个公式：`2×层数×KV头数×头维×序列长度×字节`。本章把"KV Cache 为什么这么贵、怎么在 7B 模型 32k 长度下手算它"讲成一个完整账本（实测：MHA 16GB vs GQA 4GB、decode 快 14.0×、分页碎片 70%→1%、前缀缓存省 42%）。紧承 09-Embedding 之后，[`11-Logits 与采样`](../02-核心原理/11-Logits与采样-Temperature-TopK-TopP.md) 接力。
 
 > 一句话带走：**Embedding 是 token 迈出向量的第一步——查表取行（恒等 one-hot、128k 物理不可行）、前向稀疏（∝序列长度、3.2% 触碰）、可与输出头共享（省 50%）、128k 词表占 1.05B 参数（≈13%）；它的语义形状先于训练就已藏在这套语料统计里（PPMI 近邻实测 0.8 档）。**
 
@@ -188,5 +188,5 @@ Embedding 做完了"信息流的入口"，下一个"贵"的点在**进去之后*
 - Dosovitskiy et al. (2020) *An Image is Worth 16×16 Words*（ViT）：patch embedding = 图像版"进 Transformer 的入口票"（衍生挂载）
 - PyTorch docs：`torch.nn.Embedding`（前向 = gather，`weight` 即 `(V, D)` 参数矩阵）
 - 衔接上一章：`08-Tokenizer-BPE-SentencePiece-BBPE`；`01-Transformer`（shape 链 `token→x` 的第一跳）；`03`/`04`（KV 显存账的下一站）
-- 衍生挂载：`10-多模态/ViT 章`（patch embedding）、`11-Logits 与采样`（输出头把隐藏向量投回词表分数）
+- 衍生挂载：`10-多模态/ViT 章`（patch embedding）、[`11-Logits 与采样`](../02-核心原理/11-Logits与采样-Temperature-TopK-TopP.md)（输出头把隐藏向量投回词表分数）
 - `code/scripts/embedding_demo.py`：实验 A1 查表恒等（maxerr=0.0）、A2 稀疏访问账（3.2%）、A3 tied 参数账（省 50%）、A4 PPMI 语义近邻（一键复现）

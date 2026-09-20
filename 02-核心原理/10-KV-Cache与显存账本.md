@@ -184,7 +184,7 @@ A3 PagedAttention 玩具（账算模拟）：
 
 生成循环走到这一步：`prefill 算完 KV → 循环{ decode 用缓存算第 t 个 token 的 logits → ... }`。要把 logits 变成"下一个词"，还需要最后一环——**采样**。它决定同一个 logits 向量下你得到什么样的文本（贪心？随机？多宽？），是"推理质量与多样性的旋钮"：
 
-> **`11-Logits与采样-Temperature-TopK-TopP`**（下一章, 规划）：`decode` 每步产出的 logits 向量怎么变成下一个 token——temperature 重塑分布、Top-k/Top-p 截断长尾、以及重复惩罚；这篇把"生成"收尾，之后 `12-` 起进入预训练/SFT/RLHF 的训练主线。
+> **[`11-Logits与采样-Temperature-TopK-TopP`](../02-核心原理/11-Logits与采样-Temperature-TopK-TopP.md)**：`decode` 每步产出的 logits 向量怎么变成下一个 token——temperature 重塑分布（实测熵 0.90→3.36 nats）、Top-k/Top-p 截断长尾（实测涌现集 8 vs 27 词）、重复惩罚治无限循环；这篇把"生成"收尾，之后 `12-` 起进入预训练/SFT/RLHF 的训练主线。
 
 > 一句话带走：**KV Cache 是"不重算没变过的历史"——手算公式 `2×L×H_kv×d×seq×2B` 让 7B@32k 的 KV = 16 GB(MHA)/4 GB(GQA)、占权重+KV 的 53%/22%（实测 A1）；带缓存生成步快 14.0×（实测 A2）；prefill 是平方律；省 KV 的谱系=GQA/MLA（架构少存）+ PagedAttention（系统分页、碎片 70%→1%）+ 前缀缓存（省 42%）+ 量化、剪枝（数值与策略）。**
 
@@ -196,6 +196,6 @@ A3 PagedAttention 玩具（账算模拟）：
 - Kwon et al. (2023) *Efficient Memory Management for Large Language Model Serving with PagedAttention*（vLLM）：KV 分页、近零碎片、支持前缀共享——本文 A3 的机制出处
 - Touvron et al. (2023) *LLaMA 2*；Llama-3 model card：`num_key_value_heads=8`（GQA-8）——本文 A1 账算输入
 - 衔接上游：`03-多头注意力-MHA-MQA-GQA`（GQA 8k 4→1 GB）、`04-MLA-多头潜注意力`（MLA 128k 8.6 GiB）、`01-Transformer`（KV 复用 ≈12×）、`09-Embedding与词表`（权重显存的另一本账）
-- 衍生挂载：`05-推理与部署`（KV 量化/PagedAttention/连续批处理/PD 分离）、`11-Logits 与采样`（下一步）
+- 衍生挂载：`05-推理与部署`（KV 量化/PagedAttention/连续批处理/PD 分离）、[`11-Logits 与采样`](../02-核心原理/11-Logits与采样-Temperature-TopK-TopP.md)（下一步）
 - H2O（2023）/ SnapKV（2024）：KV 剪枝的代表（观点，非本文实测）
 - `code/scripts/kv_cache_demo.py`：实验 A1 手算账、A2 prefill/decode 实测、A3 分页碎片与前缀缓存模拟（一键复现）
