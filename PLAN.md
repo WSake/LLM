@@ -604,5 +604,6 @@ LLM/
 | P0 章节正文首篇 | ✅ | `08-RAG体系/01-Embedding与检索基础.md`（配 009，检索基础/选型/指标/常见坑，Hit@k 实测数字入文） |
 | P0 章节正文第二篇 | ✅ | `08-RAG体系/03-混合检索与重排.md`（min-max/加权 vs RRF、Reranker/ColBERT；实测 009 两路 top-5 重合率 0.40 入文） |
 | P0 章节正文第三篇 | ✅ | `08-RAG体系/04-分块与元数据.md`（六种分块选型+元数据；复现脚本 `code/notebooks/_tools/chunk_demo.py` 实测量入文） |
+| P0 章节正文第四篇 | ✅ | `08-RAG体系/07-RAG评测-RAGAS.md`（三层指标全拆解 + 判别性对照实验：错来源答案使 0.74→0.40） |
 
-**下一项（阶段 1 持续）**：`08-RAG体系/05-查询侧.md`——Query Rewrite / Multi-query / HyDE / Multi-hop，把"问题"的表达本身做对。
+**下一项（阶段 1 持续）**：`08-RAG体系/10-Agentic RAG.md` 或 `05-查询侧.md`——按"差异化×可跑"优先级继续 P0 长尾。
