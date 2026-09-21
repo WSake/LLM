@@ -13,6 +13,9 @@ env/
 out/
 .tmp_run/
 
+# 教学原型脚本（绝不入库，课件私有）
+code/scripts/_proto_gpt.py
+
 # IDE
 .idea/
 .vscode/

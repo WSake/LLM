@@ -114,6 +114,7 @@ class Engine:
         assert NH * self.DH == C and NH % self.NV == 0
         self.dff = 8 * C // 3
         self.mask = np.tril(np.ones((T, T)))
+        self.masks = None   # 可选：长度 NL 的逐层掩码；None 时所有层共用 self.mask（交替注意力用）
         self.ropcos, self.ropsin = rot_cos_sin(T, C, base)
         if self.NV * self.DH != C:
             self.kcos, self.ksin = rot_cos_sin(T, self.NV * self.DH, base)
@@ -177,7 +178,8 @@ class Engine:
             kv_idx = np.arange(self.NH) // self.KPG                         # 每组 query 头共享一个 KV
             ke = k[:, kv_idx]                                               # (B,H,T,DH) 扩展
             ve = v[:, kv_idx]
-            attlog = q @ ke.transpose(0, 1, 3, 2) / math.sqrt(self.DH) + np.where(self.mask == 1, 0.0, -np.inf)
+            mask = self.masks[l] if self.masks is not None else self.mask
+            attlog = q @ ke.transpose(0, 1, 3, 2) / math.sqrt(self.DH) + np.where(mask == 1, 0.0, -np.inf)
             att = softmax(attlog)
             y = att @ ve
             y = y.transpose(0, 2, 1, 3).reshape(Bb, T, self.C)
