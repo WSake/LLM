@@ -157,14 +157,17 @@ class Engine:
         y, s = cache
         return rmsn_backward(dy, y, s)
 
-    def fwd(self, tok, p):
+    def fwd(self, tok, p, init_emb=None):
+        """init_emb: 外部预构建的输入 embedding（多模态全家谱：视觉 CLS/模态 token 注入等）。
+        None（默认）走旧 Wte 查表路径，逐字节向后兼容；非 None 时本引擎不回写 Wte（梯度由外部回收）。"""
         Bb, T = tok.shape
+        self._uie = init_emb is not None
         if self.pos == "abs":
-            x = p["Wte"][tok] + p["Wpos"][None]
+            x = init_emb + p["Wpos"][None] if self._uie else p["Wte"][tok] + p["Wpos"][None]
         elif self.pos == "sin":
-            x = p["Wte"][tok] + self.sinpos[None]
+            x = init_emb + self.sinpos[None] if self._uie else p["Wte"][tok] + self.sinpos[None]
         else:
-            x = p["Wte"][tok]
+            x = init_emb if self._uie else p["Wte"][tok]
         caches = []
         for l in range(self.NL):
             n1 = self.norm_fwd(x)
@@ -261,11 +264,14 @@ class Engine:
             if l == 0 and self.pos == "abs":
                 g["Wpos"] += d_x.sum(axis=0)
             if l == 0:
-                np.add.at(g["Wte"], cache["tok"], d_x)
+                if self._uie:
+                    cache["dx0"] = d_x      # 外部 injected embedding 的梯度回调，由外部参数回收
+                else:
+                    np.add.at(g["Wte"], cache["tok"], d_x)
         return g
 
-    def mask_loss(self, p, tok, tgt, lm):
-        c = self.fwd(tok, p)
+    def mask_loss(self, p, tok, tgt, lm, init_emb=None):
+        c = self.fwd(tok, p, init_emb=init_emb)
         lp = c["logp"]
         return (-lp[np.arange(tok.shape[0])[:, None], np.arange(self.T)[None, :], tgt] * lm).sum() / lm.sum(), c
 
