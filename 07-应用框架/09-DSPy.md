@@ -40,7 +40,7 @@
 
 1. **思想 > 工具**：DSPy 想自动化的不是"再包一层链"，而是**你调 prompt 的那双手**——few-shot 挑哪些示例、CoT 要不要、提示词措辞怎么改。optimizer 把这三件事从手调变成编译。
 2. **它比所有邻居都激进**：LangChain 说「链是程序」、LangGraph 说「图是程序」、DSPy 说**「整个调 prompt 的过程是程序」**。所以账 A 实测的是编译器最核心一步：一句话签名到底被编译成什么样、放大多少倍。
-3. **给 07 章收口前的补位**：下一篇 `11-MCP协议` 是协议关键章、再后是 12 收束章；DSPy 作为类 5「Prompt 编程/优化」的唯一一课，正好把「框架 + 提示词都归场景」之前最后一块没盖的功能区补上——**质量敏感型任务的编译器**（§7.14 决策树点名）。
+3. **给 07 章收口前的补位**：下一篇 `11-MCP协议`（✅ 已交付 v0.37）是协议关键章、再后是 12 收束章；DSPy 作为类 5「Prompt 编程/优化」的唯一一课，正好把「框架 + 提示词都归场景」之前最后一块没盖的功能区补上——**质量敏感型任务的编译器**（§7.14 决策树点名）。
 
 ## 1. 先把问题拆开：从 prompt 玄学到语义程序
 
@@ -335,7 +335,7 @@ def pipeline(text):
 - **本课地图**：§7.10（DSPy——signature→module→optimizer、bootstrapping、把玄学 prompt 变成可评测可优化对象）+ §7.1（类 5 Prompt 编程/优化 DSPy/Outlines）+ §7.14（质量敏感型任务 → DSPy）+ §17.5.9（DSPy：自动 few-shot、多模块编译）。
 - **选择树 8 场景**（探针断言 8/8，要素事实）：表见账 D——一句话：quality-sensitive/自动评测任务归 **DSPy**，状态图归 LangGraph，对话归 AG2，角色化归 CrewAI，RAG 归 LlamaIndex，低代码归 Dify，轻量不足归 Agents SDK，协议归 MCP。
 - **前承**：00-框架分类学（账 C「DSPy 无承袭边独立」——本篇账 C 用 md5 指纹兑现「结构不依赖相邻框架、内容不依赖手写示例」）；06-应用开发 02（few-shot 预算账 → 本篇编译期自动挑示例）；06-应用开发 04（JSON 合法≠Schema 合规 → 本篇 JSONAdapter 是解析器兜格式第三现场）；06-应用开发 05（工具入参 Schema → 本篇 ReAct 导入面）；10-OpenAI-Agents SDK（stub 预置决策表 vs 本篇 optimizer 自动逼近——SDK 手写决策、DSPy 编译决策，两端对照）；08-RAG 13（生成 vs 筛选账 → 本篇 bootstrap 的 metric 把关同源）。
-- **后启**：`11-MCP协议`（关键章：Agent 的工具出口——DSPy 的 ReAct 模块对接工具/检索的挂接点，链路 `013` 手写 MCP Server）；`12-框架继承关系与选型决策`（收束章：完整 DAG——本篇「Prompt 编程/优化」与 MCP 协议是两类独立的优化面）。
+- **后启**：`11-MCP协议`（✅ 已交付 v0.37：关键章——Agent 的工具出口；DSPy 的 ReAct 模块对接工具/检索的挂接点，链路 `013` 手写 MCP Server 已交付）；`12-框架继承关系与选型决策`（收束章：完整 DAG——本篇「Prompt 编程/优化」与 MCP 协议是两类独立的优化面）。
 - **对应里程碑**：无独立编号；§17.5.9 练习「用 DSPy 优化一个分类任务的 prompt」= 本篇账 A/B 对口（分类签名→编译→few-shot）。
 
 > 本篇完工于 2026-09-22（v0.36 批次）；探针 代码 `code/notebooks/_tools/dspy_demo.py`；stdout md5 `c45b24fd…`。
