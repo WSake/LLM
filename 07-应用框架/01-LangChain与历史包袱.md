@@ -268,7 +268,7 @@ done · 一键复现：python code/notebooks/_tools/langchain_demo.py
 |---|---|---|
 | `01-LangChain与历史包袱`（本篇） | 账 A 类 1 / 账 C 最长链起点：Chain 概念 vs 库的包袱 | 🔥 已交付（本文） |
 | `02-LangGraph-状态图与Checkpoint` | 账 D 图式对照臂：链省组装、图省状态/循环/恢复 | 🔥 已交付（里程碑 012） |
-| `03-LlamaIndex` | 账 A 类 3 / Haystack 双栖交集：RAG 专精（接 08 章） | ⬜ 下一站 |
+| `03-LlamaIndex` | 账 A 类 3 / Haystack 双栖交集：RAG 专精（接 08 章） | 🔥 已交付（v0.29） |
 | `04-低代码` | 账 B"四痛点全主"的平台（Dify/Coze/n8n） | ⬜ |
 | `05-Haystack` | 双栖点别二：生产级 RAG 管线的 pipeline 思维 | ⬜ |
 | `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈 | ⬜ |
@@ -302,7 +302,7 @@ done · 一键复现：python code/notebooks/_tools/langchain_demo.py
 - **本页地图**：§7.2（LangChain 概念贡献 + 包袱清单 + 转型）+ §17.5.8（LangChain 与历史包袱）+ §7.13（谱系起点）。
 - **选择树 8 场景**（探针断言 8/8）：① 学概念 → langchain-core 的 Runnable/LCEL，不装重量依赖；② 线性脚本 → `PromptTemplate | 模型 | StrOutputParser`（账 A）；③ 批量/并发 → `batch()` 换触发不换代码（账 A）；④ 需要状态/恢复/重试 → LangGraph 优先于 chain（账 D 挂靠 02 章）；⑤ 已有 0.x 代码 → 先过生存表迁移到 core 组件（账 C）；⑥ 只借组件 → 库集合小件（账 C）；⑦ 生产可观测 → LangSmith/自接 Langfuse；⑧ 嫌封装厚 → 直写原生 SDK 或轻量运行时（账 B）。
 - **前承**：00-框架分类学（开篇章，类 1 与谱系定位）；06-应用开发全 6 篇（直写原语基准）；08-RAG（后文 LlamaIndex/Haystack 的挂靠面）。
-- **后启**：02-LangGraph（✅ 已交付，账 D 图式对照臂）；`03-LlamaIndex`（账 A 类 3：索引与检索把"数据-流"吃干净，LangChain 的检索组件变成其中一个子集，衔接 08-章 12 篇实测）；`05-Haystack`（pipeline 思维）；`12-继承关系与选型决策`（收束章）。
+- **后启**：02-LangGraph（✅ 已交付，账 D 图式对照臂）；`03-LlamaIndex`（✅ 已交付 v0.29：账 A 类 3：索引与检索把"数据-流"吃干净，LangChain 的检索组件变成其中一个子集，真实 llama-index-core 0.14.25 引擎四账实测，衔接 08-章 12 篇实测）；`05-Haystack`（pipeline 思维）；`12-继承关系与选型决策`（收束章）。
 - **对应里程碑**：`012`（带记忆重试客服）——本页与 02 章各跑一侧范式；下一里程碑 `013`（手写 MCP Server）仍在 `11-MCP协议` 章。
 
 > 本篇完工于 2026-09-22（v0.28 批次）；探针 `code/notebooks/_tools/langchain_demo.py`；stdout md5 `900181e7…`。
