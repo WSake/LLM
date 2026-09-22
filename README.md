@@ -55,7 +55,7 @@
 | [`06-应用开发`](06-应用开发) | API / Prompt / 工具调用 / Workflow（已开篇 01 Model API 与流式·接口基本功三件套 + 02 Prompt·从咒语到科学四账 + 03 Context·给什么四账 + 04 结构化输出·合法≠合规 + 05 工具调用·入参对齐与回喂循环） | §6 |
 | [`07-应用框架`](07-应用框架) | LangGraph / LlamaIndex / MCP / DSPy … | §7 |
 | [`08-RAG体系`](08-RAG体系) ⭐ | 检索 → 重排 → GraphRAG → Agentic RAG → 评测（已开篇 02 核心流水线·总览 + 01 检索基础 + 03 混合重排 + 04 分块元数据 + 05 查询侧 + 06 上下文压缩 + 07 RAGAS 评测 + 08 向量数据库选型·先定场景再选库 + 09 Advanced 模式 + 10 Agentic RAG 决策层 + 11 GraphRAG 实体图谱 + 13 失败模式与修复·坏在哪就去哪修） | §8 |
-| [`09-Agent体系`](09-Agent体系) ⭐ | Loop → Coding Agent → 评测 → 安全（已开篇 01 Agent 定义与演进谱系·先画 Loop 再谈一切：7 世代能力梯 + 12 系统 5 类判别 + 五要素复习链；02 Agent Loop 主循环·六状态机 + 护栏三件套 + 四可失败点×护栏；03 Planning 与任务分解·想几次才做（一次性<逐步<分层）·拆多细才稳（任务分解树）·计划可信吗（PlanBench 思路四指标评测闸）；04 行动推理范式·ReAct 骨架 想→做→看（T→A→O 三元组不变式）·Reflexion/Self-Refine 自纠错（执行器外验 vs 自我批判内验）·ToT/LATS 树搜索（充分=贵·价值引导=杠杆）·2025 推理模型 thinking 吸收 Thought 层（框架剩 行动/观察/反思）） | §9 |
+| [`09-Agent体系`](09-Agent体系) ⭐ | Loop → Coding Agent → 评测 → 安全（已开篇 01 Agent 定义与演进谱系·先画 Loop 再谈一切：7 世代能力梯 + 12 系统 5 类判别 + 五要素复习链；02 Agent Loop 主循环·六状态机 + 护栏三件套 + 四可失败点×护栏；03 Planning 与任务分解·想几次才做（一次性<逐步<分层）·拆多细才稳（任务分解树）·计划可信吗（PlanBench 思路四指标评测闸）；04 行动推理范式·ReAct 骨架 想→做→看（T→A→O 三元组不变式）·Reflexion/Self-Refine 自纠错（执行器外验 vs 自我批判内验）·ToT/LATS 树搜索（充分=贵·价值引导=杠杆）·2025 推理模型 thinking 吸收 Thought 层（框架剩 行动/观察/反思）；05 Coding Agent·能改代码跑测试修 bug（Action=写代码·Observation=编译/测试/报错回读·Reflexion=看报错改代码：看报错 2 次 vs 盲改 4 次收敛·仓库导航 索引问相关 grep 管精确·并行多分支省墙钟·过全套测试才接受+高危操作人工确认）） | §9 |
 | [`10-多模态`](10-多模态) | ViT / VLM / OCR / 语音 / 视频 | §10 |
 | [`11-评测与可观测`](11-评测与可观测) ⭐ | Benchmark / LLM-judge / Langfuse | §11 |
 | [`12-安全`](12-安全) | 注入 / 越狱 / 护栏 / 合规 | §12 |
