@@ -248,7 +248,7 @@ done · 一键复现：python code/notebooks/_tools/haystack_demo.py
 | `03-LlamaIndex` | 账 D 组件映射的对照：对象式 RAG vs 管线组件式 RAG | 🔥 已交付（v0.29） |
 | `04-Dify-Flowise-Coze-n8n低代码` | 账 D 逃脱清单③（深度 RAG 调优）的积极归处：生产级代码侧一档 | 🔥 已交付（v0.30） |
 | `05-Haystack`（本篇） | 双栖点别二：生产级 RAG 管线"严谨的 pipeline 思维" | 🔥 已交付（本文） |
-| `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈 | ⬜ |
+| `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈：插件/函数/自动调用三原语（函数=一等公民） | 🔥 已交付（v0.32） |
 | `07-AutoGen·AG2` · `08-CrewAI` | 账 A 类 4、账 B 状态主业：多 Agent 对话 vs 角色化 | ⬜ |
 | `09-DSPy` | "评测主业/状态不碰"、无承袭边独立路径 | ⬜ |
 | `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例 | ⬜ |

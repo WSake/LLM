@@ -288,7 +288,7 @@ done · 一键复现：python code/notebooks/_tools/llamaindex_demo.py
 | `03-LlamaIndex`（本篇） | 账 A 类 3 / 双栖点交集：RAG 专精（接 08 章 12 篇实测） | 🔥 已交付（本文） |
 | `04-低代码` | 账 B"四痛点全主"的平台（Dify/Coze/n8n） | 🔥 已交付（v0.30） |
 | `05-Haystack` | 双栖点别二：生产级 RAG 管线的 pipeline 思维 | 🔥 已交付（v0.31） |
-| `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈 | ⬜ |
+| `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈：插件/函数/自动调用三原语（函数=一等公民） | 🔥 已交付（v0.32） |
 | `07-AutoGen·AG2` · `08-CrewAI` | 账 A 类 4、账 B 状态主业：多 Agent 对话 vs 角色化 | ⬜ |
 | `09-DSPy` | "评测主业/状态不碰"、无承袭边独立路径 | ⬜ |
 | `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例 | ⬜ |
@@ -321,7 +321,7 @@ done · 一键复现：python code/notebooks/_tools/llamaindex_demo.py
 - **本页地图**：§7.4（LlamaIndex：文档/节点/索引/检索/引擎 + 多种索引 + 学习建议"RAG 专精理解深度超过 LangChain"）+ §17.5.7（LlamaIndex：最成功的 RAG 框架，全链路封装为对象）+ §7.13（谱系：LangChain→LlamaIndex 直接后代）。
 - **选择树 8 场景**（探针断言 8/8）：① 完整 RAG 起步/多格式 → LlamaIndex（本页全账）；② 只要分块/元数据 → SimpleNodeParser（账 A）；③ 只要检索 → as_retriever（账 B）；④ 只要生成 → RetrieverQueryEngine（账 C）；⑤ 混合检索补词面 → Vector + Keyword/BM25（账 B）；⑥ Agentic RAG/编排 → Workflows/QueryPipeline + Agent（要素事实）；⑦ 评测/可观测 → RAGAS/Langtrace；⑧ 私有/多样数据源 → LlamaHub/LlamaCloud。
 - **前承**：00-框架分类学（账 A 类 3 定位）；01-LangChain（Runnable 检索组件=本页子集）；08-RAG 全 12 篇（账 D 手搓对照臂的挂靠面）。
-- **后启**：`04-低代码`（✅ 已交付 v0.30：类 5 低代码平台——数据分析/无码不再是管线，是积木化+全兜底，账 C 四痛点专表铨实）；`05-Haystack`（✅ 已交付 v0.31：账 A 双栖点别二：生产级 RAG 管线的 pipeline 思维，与本文对照读——对象式 vs 管线组件式；真实 haystack-ai 3.1.1 引擎四账实测）；`09-DSPy`（Prompt 编程）；`12-继承关系与选型决策`（收束章）。
+- **后启**：`04-低代码`（✅ 已交付 v0.30：类 5 低代码平台——数据分析/无码不再是管线，是积木化+全兜底，账 C 四痛点专表铨实）；`05-Haystack`（✅ 已交付 v0.31：账 A 双栖点别二：生产级 RAG 管线的 pipeline 思维，与本文对照读——对象式 vs 管线组件式；真实 haystack-ai 3.1.1 引擎四账实测）；`06-Semantic-Kernel`（✅ 已交付 v0.32：账 D 决策表另一臂 .NET 企业栈——插件/函数/自动调用三原语、真实 semantic-kernel 1.44.1 引擎四账实测，插件 1:1 导出 MCP Server）；`09-DSPy`（Prompt 编程）；`12-继承关系与选型决策`（收束章）。
 - **对应里程碑**：`012`（带记忆重试客服，02 章已交付）之后，RAG 对象管线落 LlamaIndex（本篇）；下一里程碑 `013`（手写 MCP Server）仍在 `11-MCP协议` 章。
 
 > 本篇完工于 2026-09-22（v0.29 批次）；探针 `code/notebooks/_tools/llamaindex_demo.py`；stdout md5 `cae6dffd…`。
