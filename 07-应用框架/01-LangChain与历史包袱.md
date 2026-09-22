@@ -272,7 +272,8 @@ done · 一键复现：python code/notebooks/_tools/langchain_demo.py
 | `04-低代码` | 账 B"四痛点全主"的平台（Dify/Coze/n8n） | 🔥 已交付（v0.30） |
 | `05-Haystack` | 双栖点别二：生产级 RAG 管线的 pipeline 思维 | 🔥 已交付（v0.31） |
 | `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈：插件/函数/自动调用三原语（函数=一等公民） | 🔥 已交付（v0.32） |
-| `07-AutoGen·AG2` · `08-CrewAI` | 账 A 类 4、账 B 状态主业：多 Agent 对话 vs 角色化 | ⬜ |
+| `07-AutoGen·AG2·MAF` | 账 A 类 4 代表：多 Agent 对话范式（互聊→函数式重写→MAF 官方线），§7.8 背书 | 🔥 已交付（v0.33） |
+| `08-CrewAI` | 账 A 类 4、账 B：多 Agent 角色化分工 | ⬜ |
 | `09-DSPy` | "评测主业/状态不碰"、无承袭边独立路径 | ⬜ |
 | `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例 | ⬜ |
 | `11-MCP协议` | 账 B"覆盖 1 维"特判、账 C"2025 公共底座"、里程碑 `013` | ⬜ |
@@ -302,7 +303,7 @@ done · 一键复现：python code/notebooks/_tools/langchain_demo.py
 - **本页地图**：§7.2（LangChain 概念贡献 + 包袱清单 + 转型）+ §17.5.8（LangChain 与历史包袱）+ §7.13（谱系起点）。
 - **选择树 8 场景**（探针断言 8/8）：① 学概念 → langchain-core 的 Runnable/LCEL，不装重量依赖；② 线性脚本 → `PromptTemplate | 模型 | StrOutputParser`（账 A）；③ 批量/并发 → `batch()` 换触发不换代码（账 A）；④ 需要状态/恢复/重试 → LangGraph 优先于 chain（账 D 挂靠 02 章）；⑤ 已有 0.x 代码 → 先过生存表迁移到 core 组件（账 C）；⑥ 只借组件 → 库集合小件（账 C）；⑦ 生产可观测 → LangSmith/自接 Langfuse；⑧ 嫌封装厚 → 直写原生 SDK 或轻量运行时（账 B）。
 - **前承**：00-框架分类学（开篇章，类 1 与谱系定位）；06-应用开发全 6 篇（直写原语基准）；08-RAG（后文 LlamaIndex/Haystack 的挂靠面）。
-- **后启**：02-LangGraph（✅ 已交付，账 D 图式对照臂）；`03-LlamaIndex`（✅ 已交付 v0.29：账 A 类 3：索引与检索把"数据-流"吃干净，LangChain 的检索组件变成其中一个子集，真实 llama-index-core 0.14.25 引擎四账实测，衔接 08-章 12 篇实测）；`04-低代码`（✅ 已交付 v0.30：账 A 类 5 低代码平台——把 06-07 原语尊成可视积木、同一客服重试三家画布 5-7 块带回边的确定性测量）；`05-Haystack`（✅ 已交付 v0.31：双栖点别二——生产级 RAG 管线「严谨的 pipeline 思维」，真实 haystack-ai 3.1.1 引擎四账实测，账 C 版本存续与本文同母题：顶层 Pipeline 存活、1.x nodes/pipelines 整包 FAIL）；`06-Semantic-Kernel`（✅ 已交付 v0.32：账 C 改名最狠的对照样本——0.x 概念词全换（Skill/Planner 消失，orchestration/skill_definition/planning/core_skills 四子包整包 FAIL）只剩 Kernel 身份存活，本文"概念永存 vs 库换血"再添一极）；`12-继承关系与选型决策`（收束章）。
+- **后启**：02-LangGraph（✅ 已交付，账 D 图式对照臂）；`03-LlamaIndex`（✅ 已交付 v0.29：账 A 类 3：索引与检索把"数据-流"吃干净，LangChain 的检索组件变成其中一个子集，真实 llama-index-core 0.14.25 引擎四账实测，衔接 08-章 12 篇实测）；`04-低代码`（✅ 已交付 v0.30：账 A 类 5 低代码平台——把 06-07 原语尊成可视积木、同一客服重试三家画布 5-7 块带回边的确定性测量）；`05-Haystack`（✅ 已交付 v0.31：双栖点别二——生产级 RAG 管线「严谨的 pipeline 思维」，真实 haystack-ai 3.1.1 引擎四账实测，账 C 版本存续与本文同母题：顶层 Pipeline 存活、1.x nodes/pipelines 整包 FAIL）；`06-Semantic-Kernel`（✅ 已交付 v0.32：账 C 改名最狠的对照样本——0.x 概念词全换（Skill/Planner 消失，orchestration/skill_definition/planning/core_skills 四子包整包 FAIL）只剩 Kernel 身份存活，本文"概念永存 vs 库换血"再添一极）；`07-AutoGen-AG2-Microsoft-Agent-Framework`（✅ 已交付 v0.33：改名烈度第二家——AutoGen 经典『ConversableAgent+GroupChat 互聊』API 在 AG2 1.0 整包消失（连 `import autogen` 垫片都没了），真实 ag2 1.0.6 引擎四账）；`12-继承关系与选型决策`（收束章）。
 - **对应里程碑**：`012`（带记忆重试客服）——本页与 02 章各跑一侧范式；下一里程碑 `013`（手写 MCP Server）仍在 `11-MCP协议` 章。
 
 > 本篇完工于 2026-09-22（v0.28 批次）；探针 `code/notebooks/_tools/langchain_demo.py`；stdout md5 `900181e7…`。
