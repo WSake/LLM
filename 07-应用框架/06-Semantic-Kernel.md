@@ -285,7 +285,7 @@ done · 一键复现：python code/notebooks/_tools/semantic_kernel_demo.py
 | `07-AutoGen·AG2` | §7.8 背书：微软 2025 推出 Microsoft Agent Framework 承接 AutoGen、与 SK 统一 | 🔥 已交付（v0.33） |
 | `08-CrewAI` | 账 A 类 4/账 B：多 Agent 角色化分工（角色·任务·流程三一等公民，真实 crewai 1.15.22 引擎四账） | 🔥 已交付（v0.34） |
 | `09-DSPy` | 账 A 类 5：质量敏感评测（评测主业互补角色化） | ⬜ |
-| `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例 | ⬜ |
+| `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例（一个 Agent 对象 + 一个 Runner 函数） | 🔥 已交付（v0.35） |
 | `11-MCP协议` | 账 B"覆盖 1 维"特判、账 C"2025 公共底座"、里程碑 `013`；本篇账 D=协议层的 SK 出口 | ⬜ |
 | `12-继承关系与选型决策` | 收束章：完整 DAG + "该不该引入"量化，00 篇 C 账扩版 | ⬜ |
 
@@ -312,7 +312,7 @@ done · 一键复现：python code/notebooks/_tools/semantic_kernel_demo.py
 - **本页地图**：§7.7（Semantic Kernel：微软/企业 .NET 云 SDK/把技能+规划器封装/企业级治理/独立开发者用得少）+ §7.1（类 1 通用编排 SDK 代表三分一）+ §7.14（.NET 企业 → Semantic Kernel）+ §7.8（AutoGen 分支 AG2 + 微软 2025 Microsoft Agent Framework 与 SK 统一）。
 - **选择树 8 场景**（探针断言 8/8，要素事实）：① .NET 企业栈 → Semantic Kernel（本篇）；② 生产级 RAG → Haystack（05）；③ 状态/循环/恢复 → LangGraph（02）；④ RAG 管线专精 → LlamaIndex（03）；⑤ 非工程师 → 低代码（04）；⑥ 轻量单 Agent → Agents SDK/直写（10）；⑦ 跨栈互操作 → MCP（11·里程碑 013）；⑧ 已持 LangChain → 同系演进。
 - **前承**：00-框架分类学（账 B 标格次主次次·覆盖 4/4、选择树场景⑨）；05-Haystack（账 A `max_runs` 护栏对偶 + 账 D 场景⑤指针）；02-LangGraph（`recursion_limit` 内核级上限对偶）；06-应用开发 05-Function-Tool-Calling（函数调用入参/循环回喂/并行的语义源头）。
-- **后启**：`07-AutoGen·AG2`（✅ 已交付 v0.33：§7.8 官方背书——SK 与 AutoGen 的统一线、微软 2025 Microsoft Agent Framework 承接 AutoGen，配 `_tools/autogen_demo.py` 真实 ag2 1.0.6 四账实测）；`11-MCP协议`（本篇账 D=协议层的 SK 出口，milestone `013` 仍在 11-章）；`10-OpenAI-Agents-SDK`（回归轻量对照）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
+- **后启**：`07-AutoGen·AG2`（✅ 已交付 v0.33：§7.8 官方背书——SK 与 AutoGen 的统一线、微软 2025 Microsoft Agent Framework 承接 AutoGen，配 `_tools/autogen_demo.py` 真实 ag2 1.0.6 四账实测）；`11-MCP协议`（本篇账 D=协议层的 SK 出口，milestone `013` 仍在 11-章）；`10-OpenAI-Agents-SDK`（✅ 已交付 v0.35：回归轻量对照——Agent+Runner 一件套、手转交 §7.11 实测，真实 openai-agents 0.17.0 四账）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
 - **对应里程碑**：`012`（02 章已交付）之后，企业栈这杆由本篇收；下一里程碑 `013`（手写 MCP Server）仍在 `11-MCP协议` 章——SK 的 `as_mcp_server` 是"框架代写"的对照参照。
 
 > 本篇完工于 2026-09-22（v0.32 批次）；探针 `code/notebooks/_tools/semantic_kernel_demo.py`；stdout md5 `66c105f5…`。

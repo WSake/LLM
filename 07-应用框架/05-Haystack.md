@@ -252,7 +252,7 @@ done · 一键复现：python code/notebooks/_tools/haystack_demo.py
 | `07-AutoGen·AG2·MAF` | 账 A 类 4 代表：多 Agent 对话范式（互聊→函数式重写→MAF 官方线），§7.8 背书 | 🔥 已交付（v0.33） |
 | `08-CrewAI` | 账 A 类 4、账 B：多 Agent 角色化分工（角色·任务·流程三一等公民） | 🔥 已交付（v0.34） |
 | `09-DSPy` | "评测主业/状态不碰"、无承袭边独立路径 | ⬜ |
-| `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例 | ⬜ |
+| `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例（一个 Agent 对象 + 一个 Runner 函数） | 🔥 已交付（v0.35） |
 | `11-MCP协议` | 账 B"覆盖 1 维"特判、账 C"2025 公共底座"、里程碑 `013` | ⬜ |
 | `12-继承关系与选型决策` | 收束章：完整 DAG + "该不该引入"量化，00 篇 C 账扩版 | ⬜ |
 
@@ -279,7 +279,7 @@ done · 一键复现：python code/notebooks/_tools/haystack_demo.py
 - **本页地图**：§7.6（Haystack：类型安全/组件化/可测试/企业级文档问答·比 LangChain 收敛规范·学习价值=严谨的 pipeline 思维）+ §7.1（类 1 通用编排 SDK + 类 3 RAG 框架双栖）+ §7.14（严谨生产级 RAG → Haystack / LlamaIndex）+ §17.5（编排层技术栈：Haystack（生产 RAG）与 LlamaIndex（RAG 专精）并列）。
 - **选择树 8 场景**（探针断言 8/8，要素事实）：① 生产级多步 RAG → Haystack；② 两步小 RAG → Haystack；③ 单检索函数 → 不引入（直接 `retriever.run()`）；④ 多轮 Agent 循环/恢复 → LangGraph（02 章）；⑤ .NET 企业栈 → Semantic Kernel（00 章账 D 场景 9）；⑥ 非工程师 → Dify（04 章）；⑦ 快速 demo → 06 章手写；⑧ 四层互斥断言 → Haystack 属『通用编排+RAG 框架』双栖。
 - **前承**：00-框架分类学（双栖点 + 账 B 标格次主次次·覆盖 4/4）；02-LangGraph（账 A 上限对偶：recursion_limit）；03-LlamaIndex（账 D 对象式 vs 管线组件式对照 + Keyword ASCII-only 中文坑）；04-低代码（逃离清单③ 的积极归处）；08-RAG 全 12 篇（工序语义源头，账 D 映射的母表）。
-- **后启**：`06-Semantic-Kernel`（双栖外的企业 .NET 一格）；`07-AutoGen-AG2-Microsoft-Agent-Framework`（多 Agent 对话范式：AutoGen『互聊』→ AG2 1.0 函数式重写→MAF 官方线，真实 ag2 1.0.6 四账，账 D 场景①研究/原型默认入口）；`09-DSPy`（质量敏感/评测主业对照）；`10-OpenAI-Agents-SDK`（回归轻量的对照）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
+- **后启**：`06-Semantic-Kernel`（双栖外的企业 .NET 一格）；`07-AutoGen-AG2-Microsoft-Agent-Framework`（多 Agent 对话范式：AutoGen『互聊』→ AG2 1.0 函数式重写→MAF 官方线，真实 ag2 1.0.6 四账，账 D 场景①研究/原型默认入口）；`09-DSPy`（质量敏感/评测主业对照）；`10-OpenAI-Agents-SDK`（✅ 已交付 v0.35：回归轻量的对照——Agent+Runner 一件套、手转交 §7.11 实测，真实 openai-agents 0.17.0 四账）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
 - **对应里程碑**：`012`（02 章已交付）之后，双栖点 Fabrics 的这一格由本篇展开；下一里程碑 `013`（手写 MCP Server）仍在 `11-MCP协议` 章。
 
 > 本篇完工于 2026-09-22（v0.31 批次）；探针 `code/notebooks/_tools/haystack_demo.py`；stdout md5 `a67c1a77…`。
