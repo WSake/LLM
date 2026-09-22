@@ -306,7 +306,7 @@ role
 | `06-Semantic-Kernel` | 账 D 场景⑥：企业栈归它；护栏三态 → 插 06 的 FunctionChoiceBehavior | 🔥 已交付（v0.32） |
 | `07-AutoGen·AG2·MAF` | §7.14 同节点左右手：对话范式 vs 角色化分工（本篇账 B 终极对照） | 🔥 已交付（v0.33） |
 | `08-CrewAI`（本篇） | 多 Agent 团队流水线：角色·任务·流程三一等公民 + Flows 事件 DAG | 🔥 已交付（v0.34） |
-| `09-DSPy` | 账 A 类 5：质量敏感评测（提示图谱大师面，与角色化互补） | ⬜ |
+| `09-DSPy` | 账 A 类 5：质量敏感评测（提示图谱大师面，与角色化互补） | 🔥 已交付（v0.36） |
 | `10-OpenAI-Agents-SDK` | 账 D 场景⑧：轻量运行时「回归轻量」先例（handoff）——对话/角色化/轻量转移三范式收束 | 🔥 已交付（v0.35） |
 | `11-MCP协议` | 账 C "2025 公共底座"、里程碑 `013`；Agent 系的工具出口 | ⬜ |
 | `12-继承关系与选型决策` | 收束章：完整 DAG + "该不该引入"量化，00 篇 C 账扩版 | ⬜ |
@@ -334,7 +334,7 @@ role
 - **本页地图**：§7.14（多 Agent 协作 → CrewAI/AutoGen/Agents SDK——类 4 三家分工）+ §7.1/§7.11（类 4 多 Agent 框架、六家最挤）+ §6.9（多 Agent=多倍 token 与延迟，先证明单 Agent 不行）+ §7.8（上篇对话范式，本篇左手）；07-应用框架篇内：上接 `07-AutoGen·AG2·MAF`（§7.14 同节点）。
 - **选择树 9 场景**（探针断言 9/9，要素事实）：① 团队型固定流水线 → CrewAI；② 自由对话/群聊 → AG2；③ 复杂状态图/checkpoint → LangGraph；④ 事件分支/路由 → CrewAI Flows；⑤ 生产 RAG → Haystack；⑥ .NET 企业栈 → SK；⑦ 非工程师 → 低代码；⑧ 轻量回归 → Agents SDK；⑨ 省 token/重试 → 单 Agent + 工具循环。
 - **前承**：00-框架分类学（类 4 六家最挤、状态主业、选择树场景⑤）；07-AutoGen（§7.8 对话范式、账 A 无配置 `ConfigNotProvidedError` 构造期护栏面）；02-LangGraph（`recursion_limit` 轮上限真抛、显式边 vs 列表即图）；05-Haystack（`max_runs` 上限）；06-Semantic-Kernel（`FunctionChoiceBehavior` 配置项护栏）；06-应用开发 06-记忆系统（上下文按份滚的挑着喂解药）。
-- **后启**：`09-DSPy`（类 5 质量敏感评测，角色化互补）；`10-OpenAI-Agents-SDK`（✅ 已交付 v0.35：轻量运行时/Agents SDK 的回归轻量对照——本篇 role/goal/backstory 三套装它的 name-only 最小面（16 构造参数仅 1 必填），sys 原样透传 vs 本篇 `You are {role}` 配方，handoff §7.11 实测；真实 openai-agents 0.17.0 四账）；`11-MCP协议`（Agent 系的工具出口，里程碑 `013`）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
+- **后启**：`09-DSPy`（✅ 已交付 v0.36：类 5 质量敏感评测，角色化互补——真实 dspy 2.6.27 四账：签名=契约、编译=自动化优化、DSPy 无承袭边独立的兑现）；`10-OpenAI-Agents-SDK`（✅ 已交付 v0.35：轻量运行时/Agents SDK 的回归轻量对照——本篇 role/goal/backstory 三套装它的 name-only 最小面（16 构造参数仅 1 必填），sys 原样透传 vs 本篇 `You are {role}` 配方，handoff §7.11 实测；真实 openai-agents 0.17.0 四账）；`11-MCP协议`（Agent 系的工具出口，里程碑 `013`）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
 - **对应里程碑**：`012`（02-章交付）之后，多 Agent 两杆（对话 / 角色化分工）分别由 07/08 两篇收；下一里程碑 `013`（手写 MCP Server）在 `11-MCP协议` 章，Agent 系的工具出口等它。
 
 > 本篇完工于 2026-09-22（v0.34 批次）；探针 `code/notebooks/_tools/crewai_demo.py`；stdout md5 `fd837cd2…`。

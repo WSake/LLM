@@ -236,7 +236,7 @@ done · 一键复现：python code/notebooks/_tools/openai_agents_demo.py
 - **本课地图**：§7.11（OpenAI Agents SDK——核心 Agent→Handoff→Guardrails→Sessions/Tracing；回归轻量趋势；Swarm 前身，同类 ADK/Pydantic AI）+ §7.1（类 4 Agent 框架六家最挤）+ §7.14（多 Agent 协作→CrewAI/AutoGen/Agents SDK(handoff)；想少依赖→Agents SDK/Pydantic AI+自写工具协议）+ §7.13（谱系：2024 Swarm→2025 Agents SDK）+ §17.5.11（应用开发框架条目）+ §6.9（多 Agent=多倍 token）+ 里程碑 `020`（Agents SDK 最小实现）。
 - **选择树 8 场景**（探针断言 8/8，要素事实）：见账 D 结论 4——一句话：轻量单 Agent/工具/护栏/手转交归 SDK，角色化归 CrewAI，对话博弈归 AG2，状态图归 LangGraph，企业栈归 SK，生产 RAG 归 Haystack，低代码归 Dify，协议归 MCP。
 - **前承**：00-框架分类学（类 4 六家最挤、§7.14 决策）；02-LangGraph（`recursion_limit`/checkpoint=状态图一格；SDK 的 run loop 是无状态的无环回）；07-AutoGen（对话范式=左手）；08-CrewAI（角色化分工=右手；「role 缺失创建即 ValidationError」vs 本篇「name-only 即起」、「`You are {role}` 配方」vs 本篇「sys 原样透传」——同一范式族两极端对照）；05-Function-Tool-Calling（手搓工具协议 → 本篇 `function_tool` 装饰器）；06-应用开发 02/03（指令/上下文直传 → 本篇 instructions 原样透传 + handoff 上下文接力）。
-- **后启**：`09-DSPy`（类 5：Prompt 编程 + 自动化优化——本篇 stub 的「预置决策表」正是 DSPy 想用优化器自动逼近的目标）；`11-MCP协议`（关键章：Agent 的工具出口——SDK 的 `mcp_servers` 挂接点 + 里程碑 `013` 手写 MCP Server）；`12-框架继承关系与选型决策`（收束章：完整 DAG + 「该不该引入框架」量化——本篇「16 参数仅 1 必填」是「轻量」一侧的证据）。
+- **后启**：`09-DSPy`（✅ 已交付 v0.36：类 5：Prompt 编程 + 自动化优化——本篇 stub 的「预置决策表」正是 DSPy 想用优化器自动逼近的目标；SDK 手写决策 vs DSPy 编译决策两端对照）；`11-MCP协议`（关键章：Agent 的工具出口——SDK 的 `mcp_servers` 挂接点 + 里程碑 `013` 手写 MCP Server）；`12-框架继承关系与选型决策`（收束章：完整 DAG + 「该不该引入框架」量化——本篇「16 参数仅 1 必填」是「轻量」一侧的证据）。
 - **对应里程碑**：`020` Agents SDK 最小实现（本篇账 A/C 对口：两行起 agent、一行加第二个大脑）；前后里程碑 `012`（02-章 LangGraph 带记忆重试客服）已交付、`013`（手写 MCP Server）在 `11-MCP协议` 章等。
 
 > 本篇完工于 2026-09-22（v0.35 批次）；探针 代码 `code/notebooks/_tools/openai_agents_demo.py`；stdout md5 `d0689dfd…`。

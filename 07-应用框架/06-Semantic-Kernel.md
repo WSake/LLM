@@ -284,7 +284,7 @@ done · 一键复现：python code/notebooks/_tools/semantic_kernel_demo.py
 | `06-Semantic-Kernel`（本篇） | 企业 .NET/云 SDK 的编排一格：插件/函数/自动调用三原语 | 🔥 已交付（v0.32） |
 | `07-AutoGen·AG2` | §7.8 背书：微软 2025 推出 Microsoft Agent Framework 承接 AutoGen、与 SK 统一 | 🔥 已交付（v0.33） |
 | `08-CrewAI` | 账 A 类 4/账 B：多 Agent 角色化分工（角色·任务·流程三一等公民，真实 crewai 1.15.22 引擎四账） | 🔥 已交付（v0.34） |
-| `09-DSPy` | 账 A 类 5：质量敏感评测（评测主业互补角色化） | ⬜ |
+| `09-DSPy` | 账 A 类 5：质量敏感评测（评测主业互补角色化） | 🔥 已交付（v0.36） |
 | `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例（一个 Agent 对象 + 一个 Runner 函数） | 🔥 已交付（v0.35） |
 | `11-MCP协议` | 账 B"覆盖 1 维"特判、账 C"2025 公共底座"、里程碑 `013`；本篇账 D=协议层的 SK 出口 | ⬜ |
 | `12-继承关系与选型决策` | 收束章：完整 DAG + "该不该引入"量化，00 篇 C 账扩版 | ⬜ |
