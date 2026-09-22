@@ -250,7 +250,7 @@ done · 一键复现：python code/notebooks/_tools/haystack_demo.py
 | `05-Haystack`（本篇） | 双栖点别二：生产级 RAG 管线"严谨的 pipeline 思维" | 🔥 已交付（本文） |
 | `06-Semantic-Kernel` | 账 D 场景 .NET/微软企业栈：插件/函数/自动调用三原语（函数=一等公民） | 🔥 已交付（v0.32） |
 | `07-AutoGen·AG2·MAF` | 账 A 类 4 代表：多 Agent 对话范式（互聊→函数式重写→MAF 官方线），§7.8 背书 | 🔥 已交付（v0.33） |
-| `08-CrewAI` | 账 A 类 4、账 B：多 Agent 角色化分工 | ⬜ |
+| `08-CrewAI` | 账 A 类 4、账 B：多 Agent 角色化分工（角色·任务·流程三一等公民） | 🔥 已交付（v0.34） |
 | `09-DSPy` | "评测主业/状态不碰"、无承袭边独立路径 | ⬜ |
 | `10-OpenAI-Agents-SDK` | 账 D 场景 6：轻量运行时"回归轻量"先例 | ⬜ |
 | `11-MCP协议` | 账 B"覆盖 1 维"特判、账 C"2025 公共底座"、里程碑 `013` | ⬜ |

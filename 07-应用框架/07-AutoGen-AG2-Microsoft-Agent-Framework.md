@@ -273,7 +273,8 @@ done · 一键复现：python code/notebooks/_tools/autogen_demo.py
 | `05-Haystack` | 账 A 护栏强化（max_runs 真兜底）＋账 D 场景④：生产级 RAG 管线归它 | 🔥 已交付（v0.31） |
 | `06-Semantic-Kernel` | §7.8 相邻：SK 是微软企业栈"下一步与 AutoGen 统一"的另外半边 | 🔥 已交付（v0.32） |
 | `07-AutoGen·AG2·MAF`（本篇） | 多 Agent 对话范式：经典『互聊』API → 1.0 函数式重写 → MAF 官方线 | 🔥 已交付（v0.33） |
-| `08-CrewAI` · `09-DSPy` | 账 A 类 4/账 B：多 Agent 角色化 vs 质量敏感评测（角色化/评测两格还没展开） | ⬜ |
+| `08-CrewAI` | 账 A 类 4/账 B：多 Agent 角色化分工（角色·任务·流程三一等公民，真实 crewai 1.15.22 引擎四账） | 🔥 已交付（v0.34） |
+| `09-DSPy` | 账 A 类 5：质量敏感评测（提示图谱·评测主业互补角色化/对话） | ⬜ |
 | `10-OpenAI-Agents-SDK` | 账 D 场景⑧：轻量运行时「回归轻量」先例（handoff） | ⬜ |
 | `11-MCP协议` | 账 C "2025 公共底座"、里程碑 `013`；Agent 系的工具出口 | ⬜ |
 | `12-继承关系与选型决策` | 收束章：完整 DAG + "该不该引入"量化，00 篇 C 账扩版 | ⬜ |
@@ -301,7 +302,7 @@ done · 一键复现：python code/notebooks/_tools/autogen_demo.py
 - **本页地图**：§7.8（AutoGen 2023 微软·互聊 paradigm·AG2 社区分支·MAF 2025 承接 AutoGen 与 SK 统一·生产需自己加状态管理）+ §7.1（类 4 多 Agent 框架六家最挤）+ §6.9（多 Agent=多倍 token 与延迟，先证明单 Agent 不行）+ §7.14（多 Agent 协作 → CrewAI/AutoGen/Agents SDK）；§7.11（Agents SDK handoff 轻量对照，接 10-篇）。
 - **选择树 9 场景**（探针断言 9/9，要素事实）：① 研究/原型要互聊 → AutoGen/AG2；② 生产状态/检查点 → LangGraph；③ 子任务委托+checkpoint → AG2 v1.0 Task；④ 生产 RAG → Haystack；⑤ RAG 专精 → LlamaIndex；⑥ 企业 .NET → SK；⑦ 非工程师 → 低代码；⑧ 轻量回归 → Agents SDK；⑨ 微软 2025 路线 → MAF。
 - **前承**：00-框架分类学（类 4 六家最挤、状态主业、选择树场景⑤）；02-LangGraph（`recursion_limit` 轮数护栏对偶 + checkpoint 归处）；05-Haystack（`max_runs` 上限第三例）；06-Semantic-Kernel（§7.8 相邻：SK 的"下一步"=本篇的 MAF 线；护栏三态对照：ConfigNotProvidedError vs FunctionChoiceBehavior vs recursion_limit）；06-应用开发 06-记忆系统（历史回灌/挑着喂 vs AG2 全量回灌）。
-- **后启**：`08-CrewAI`（同属类 4，角色化一格）；`10-OpenAI-Agents-SDK`（轻量运行时/APIs SDK 的回归轻量对照，§7.11 handoff）；`11-MCP协议`（Agent 系的工具出口，里程碑 `013`）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
+- **后启**：`08-CrewAI`（✅ 已交付 v0.34：同属类 4 的第二杆——角色·任务·流程三个一等公民 = 声明式团队流水线，与本篇『对话范式』左右手，真实 crewai 1.15.22 四账）；`10-OpenAI-Agents-SDK`（轻量运行时/APIs SDK 的回归轻量对照，§7.11 handoff）；`11-MCP协议`（Agent 系的工具出口，里程碑 `013`）；`12-继承关系与选型决策`（收束章：完整 DAG + "该不该引入"量化）。
 - **对应里程碑**：`012`（02-章交付）之后，多 Agent 对话范式这杆由本篇收；下一里程碑 `013`（手写 MCP Server）在 `11-MCP协议` 章，Agent 系的工具出口等它。
 
 > 本篇完工于 2026-09-22（v0.33 批次）；探针 `code/notebooks/_tools/autogen_demo.py`；stdout md5 `b39ccb9b…`。
