@@ -188,4 +188,4 @@ python code/scripts/pref_data_demo.py
 ```
 
 - 正向衔接：`04-训练体系/03-SFT数据-指令集构建`（回答 = 梯度权单位）→ `02-核心原理/14-对齐-RLHF与PPO`（RM 训练 383 对·79%）→ `15-DPO家族`（偏好对免 RM 直接训练）。
-- 扩展阅读（来自 `00-偏好对齐-旧提纲`，业界资源）：[奖励模型：语言模型的另一种可能](https://huggingface.co/blog/rlhf)、[InstructGPT/RLHF 方法论](https://openai.com/index/learning-from-human-preferences/)（非本机实测）。
+- 扩展阅读（业界资源）：[奖励模型：语言模型的另一种可能](https://huggingface.co/blog/rlhf)、[InstructGPT/RLHF 方法论](https://openai.com/index/learning-from-human-preferences/)（非本机实测）。

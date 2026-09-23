@@ -58,7 +58,7 @@
 
 ### 2.1 三种形态，成本与可验证性各异
 
-真实的指令集构建不只有一条路，`00-构建指令数据集-旧提纲` 列的 Alpaca 式合成、Evol-Instruct 扩写、人工筛数据在这里可以归成三类（后两种业界口径，**非本机实测**）：
+真实的指令集构建不只有一条路，Alpaca 式合成、Evol-Instruct 扩写、人工筛数据在这里可以归成三类（后两种业界口径，**非本机实测**）：
 
 | 形态 | 怎么得到样本 | 成本 | 可验证性 |
 |---|---|---|---|
@@ -194,4 +194,4 @@ python code/scripts/sft_data_demo.py
 ```
 
 - 正向衔接：`04-训练体系/02-合成数据与数据飞轮`（样本质检三连、双胞胎计判重）→ `04-训练体系/01-预训练数据工程-采集-清洗-去重`（token 预算 C2、池地板）→ `02-核心原理/13-SFT-监督微调`（掩码/全新问法/多样 vs 重复）。
-- 扩展阅读（来自 `00-构建指令数据集-旧提纲`，业界资源）：[Alpaca 式种子合成与清洗](https://crfm.stanford.edu/2023/03/13/alpaca.html)、[Evol-Instruct 改进现有数据集](https://arxiv.org/abs/2304.12244)、[Orca 高质量合成数据](https://arxiv.org/abs/2306.02707)、[ChatML/Alpaca 指令模板（prompt 格式没有统一标准）](https://huggingface.co/blog/chat-templates)。
+- 扩展阅读（业界资源）：[Alpaca 式种子合成与清洗](https://crfm.stanford.edu/2023/03/13/alpaca.html)、[Evol-Instruct 改进现有数据集](https://arxiv.org/abs/2304.12244)、[Orca 高质量合成数据](https://arxiv.org/abs/2306.02707)、[ChatML/Alpaca 指令模板（prompt 格式没有统一标准）](https://huggingface.co/blog/chat-templates)。

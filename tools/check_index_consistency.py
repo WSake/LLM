@@ -3,7 +3,7 @@
 
 规则：仓库里"已存在的"每一样东西，都必须在 `00-知识地图/对照索引.md` 里有登记——
   1. 每个编号顶层目录（00-16 及其它 NN- 目录）须出现在索引 §1 总览表；
-  2. 每个目录下的正文 md（非"旧提纲"、非地图/索引自身）须可按路径在索引 §2 命中；
+  2. 每个目录下的正文 md（非地图/索引自身）须可按路径在索引 §2 命中；
   3. 每个 `code/notebooks/*.ipynb` 须在索引 §3 命中；
   4. 索引里出现的相对链接是否存在（兜底，与 check_links.py 互补）。
 
@@ -38,7 +38,7 @@ def main():
         if ('`%s`' % d) not in index_text:
             bad.append('顶层目录未在对照索引 §1 登记: %s' % d)
 
-    # 2) 目录内正文 md（顶层平铺，排除"旧提纲"与规划性文件）须路径命中索引 §2
+    # 2) 目录内正文 md（顶层平铺）须路径命中索引 §2
     #    路径在索引里以 ../NN-xxx/file.md 形式出现，故用"NN-xxx/file.md"子串匹配
     for d in num_dirs:
         for fn in sorted(os.listdir(os.path.join(ROOT, d))):
@@ -46,8 +46,6 @@ def main():
                 continue
             rel = '%s/%s' % (d, fn)
             if rel in INDEX or fn == '对照索引.md' or fn == '大模型知识地图_完整版.md':
-                continue
-            if '旧提纲' in fn:      # 旧提纲集合登记即可，不逐篇强制
                 continue
             if rel not in index_text:
                 bad.append('正文未在对照索引 §2 登记: %s' % rel)
