@@ -16,7 +16,7 @@
 
 ## 文章写作规范（重要）
 
-每篇正文 md 遵循**大纲驱动模板**（v3，详见 `plan.md` §3.1）。三句速记：
+每篇正文 md 遵循**大纲驱动模板**（v3；规范原文见本地工作总纲 `PLAN.md` §3.1，该文件按 `.gitignore` 约定不随仓库分发，故把要点直接写在这里）。三句速记：
 
 1. **章节**：一篇 = 知识地图一个小节（`10-多模态/08` 对应地图 `§10.7`），不挂靠。
 2. **大纲先行**：正文第一段就是「📑 本节大纲」，逐条列出该小节**全部**知识点——大纲覆盖不全 = 不合格，没写完就不用提交。每个大纲点 = 正文一个子节。
@@ -34,7 +34,7 @@
 ## 代码 / Notebook 提交要求
 
 - 全部放 `code/`，命名 `不重复编号`，并同步更新 `对照索引.md` 的 notebook 列
-- 提供 `requirements.txt` 增量说明（或改根目录文件）
+- 提供依赖的增量说明；根目录 [requirements.txt](requirements.txt) 是总清单（**核心探针与复现脚本零第三方依赖**，新增可选依赖请同步更新该文件并注明归属分组）
 - 用真实数据跑出至少 1 个数字 / 1 个图（没有结果 = 没完成）
 
 ## PR 提交清单
@@ -46,16 +46,19 @@
 
 ## CI 说明
 
-PR 自动跑两个检查：
-- Markdown 死链检查（`.github/workflows/ci.yml`）
-- 目录 -- 索引一致性检查
+PR 自动跑三道检查（见 `.github/workflows/ci.yml`）：
+1. **相对链接死链检查** — `python tools/check_links.py .`（GitHub 语义：相对链接按所在文件目录解析）
+2. **对照索引一致性检查** — `python tools/check_index_consistency.py`（新增正文 / notebook / 篇章探针 未登记索引即失败，强制"写一篇挪一篇"；探针声明数与 `code/notebooks/_tools/` 落盘清单也会对账）
+3. **UTF-8 无 BOM & 首行合法性检查** — 所有 `.md` 须为无 BOM 的 UTF-8，且首行以 `#` / `<div` / `>` / `-` 开头
 
-CI 全绿是合并前提。本地想跑死链检查：
+CI 全绿是合并前提。本地在仓库根目录可一次跑完前两关：
 
 ```bash
-# 需要 Node/npx
-npx markdown-link-check "**/*.md" --config .markdown-link-check.json
+python tools/check_links.py .
+python tools/check_index_consistency.py
 ```
+
+> 第三关由 CI 内联脚本执行；旧的 `npx markdown-link-check` + `.markdown-link-check.json` 方式已不再使用（该配置文件也不在仓库中）。
 
 ## Issue 模板使用场景
 

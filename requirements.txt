@@ -1,0 +1,36 @@
+# LLM 学习仓库 · Python 依赖说明
+#
+# 【核心零依赖】本仓库的 46 个 `code/scripts/*_demo.py` 与 76 个篇章探针
+# `code/notebooks/_tools/*_demo.py` 全部为**纯 Python 标准库**实现
+# （零网络 / 零随机 / 零第三方），直接 `python <脚本>.py` 即可运行。
+# 只想复现正文里的数字、或跑 CI 三关，**不需要安装本文件的任何一行**。
+#
+# 【本文件用途】仅为 6 个 `code/notebooks/*.ipynb` 与少数「真实框架对照探针」
+# 提供可选依赖。A 组是 RAG / 评测 notebook 的轻量基线；B 组会拉起 torch，
+# 体积大，按需取消注释；C 组只在跑 07 章框架对照实验时需要。
+#
+# 不指定精确版本的行表示"较新的稳定版即可"；C 组带版本号的两行来自
+# `00-知识地图/对照索引.md` 记录的本机实测版本，其余未在线复核、不写死版本。
+
+# --- A. 轻量基础（RAG 检索 / 评测基线 notebook）---
+numpy>=1.24
+pandas>=2.0
+jieba>=0.42
+rank_bm25>=0.2.2
+faiss-cpu>=1.7.4
+
+# --- B. 模型与嵌入（会拉起 torch，按需启用）---
+# sentence-transformers>=2.2
+# transformers>=4.40
+# torch>=2.0
+# openai>=1.0
+
+# --- C. 真实框架对照探针（07-应用框架，按需单独安装）---
+# langgraph==1.0.10
+# llama-index-core==0.14.25
+# haystack-ai
+
+# --- D. CI 三关（无第三方依赖）---
+# python tools/check_links.py .
+# python tools/check_index_consistency.py
+# 第三关（UTF-8 无 BOM & 首行合法性）由 .github/workflows/ci.yml 内联脚本执行。
